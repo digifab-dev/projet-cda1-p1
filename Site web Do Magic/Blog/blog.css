@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #454651;
+    height: 100vh;
+    width: 100%;
+}
+header {
+    display: flex;
+    justify-content: center;
+}
+header img {
+    width: 60px;
+    height: 60px;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+h1 {
+    font-size: 70px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+
+}
+.titres {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin-top: 7%;
+}
+.titres p {
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+    font-family: 'Indie Flower', cursive;
+    letter-spacing: 4px;
+    
+}
+.videos {
+   
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    margin-top: 20%;
+
+
+}
+.videos p {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'Koulen', cursive;
+    color: white;
+    letter-spacing: 3px;
+}
+
+.cardistry {
+    margin-top: 50px;
+}
+.cardistry p {
+    border-left: 1px solid white;
+    padding-left: 20px;
+}
+.mentalism {
+    margin-top: 50px;
+    margin-right: 60px;
+
+}
+.mentalism p {
+    border-left: 1px solid white;
+    padding-left: 20px;
+}
+footer {
+    display: flex;
+    justify-content: end;
+}
+.topicon {
+    display: flex;
+    justify-content: start;
+    animation: rotation 2s ease-in;
+    position: absolute;
+
+}
+.bottomicon {
+    animation: rotation 2s ease-in;
+
+}
+@keyframes rotation {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(180deg);
+    }
+}
+
+.items:hover {
+    transform: scale(0.9);
+    cursor: pointer;
+} 
+.vid:hover {
+    transform: scale(0.9);
+    cursor: pointer;
+} 
+
+
+.articles {
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    margin-top: 10%;
+    display: none;
+}
+.articles h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'Koulen', cursive;
+    color: white;
+    letter-spacing: 3px;
+}
+.articles p {
+
+    width: 80%;
+    margin-left: 40px;
+    color: white;
+    font-size: 30px;
+}
+.closeup {
+    margin-top: 50px;
+}

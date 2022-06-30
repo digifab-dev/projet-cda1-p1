@@ -1,0 +1,339 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #454651;
+    width: 100%;
+    height: 100vh;
+
+}
+
+.topicon {
+    display: flex;
+    justify-content: start;
+    animation: rotation 2s ease-in;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(180deg);
+    }
+}
+
+.bottomicon {
+    margin-top: 150px;
+    animation: rotation 2s ease-in;
+
+
+}
+
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+header {
+    margin: 0;
+}
+
+.titre {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.titre img {
+    width: 70px;
+    height: 70px;
+    margin-top: 60px;
+    margin-left: 10px;
+    animation: slide 1s ease-in;
+
+}
+
+h1 {
+    font-size: 70px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 5px;
+    font-family: 'Koulen', cursive;
+    text-transform: uppercase;
+    animation: slide 1s ease-in;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.touch img {
+    height: 20px;
+    position: relative;
+    top: 50px;
+}
+
+
+.touch {
+    background-color: #F73746;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    margin-left: 40%;
+    margin-bottom: 100px;
+    padding-right: 20px;
+    position: relative;
+
+}
+
+.touch:hover {
+    transform: scale(0.9);
+
+}
+
+.touch a {
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+
+
+
+#magiciens {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.magiciens {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.one {
+    background-image: url(/Images/magician1.png);
+    background-size: cover;
+    width: 190px;
+    height: 250px;
+    display: block;
+}
+
+.two {
+    background-image: url(/Images/magician2.png);
+    background-size: cover;
+    width: 190px;
+    height: 250px;
+    display: block;
+}
+
+.three {
+    background-image: url(/Images/magicien3.png);
+    background-size: cover;
+    width: 190px;
+    height: 250px;
+    display: block;
+}
+
+.four {
+    background-image: url(/Images/DAVID\ BLAINE.png);
+    width: 190px;
+    height: 250px;
+    display: block;
+}
+
+[type="checkbox"] {
+    display: none;
+}
+
+/* .cadre {
+    width: 20%;
+    height: 250px;
+    background-color: #292a2c;
+    position: absolute;
+    transform: translateX(-15%);
+    visibility: hidden;
+    box-shadow: 5px 5px 10px#292a2c;
+    border-radius: 10%;
+    border: 0;
+} */
+.cadre {
+    width: 15%;
+    position: absolute;
+    height: 250px;
+    background-color: #292a2c;
+    z-index: -2;
+    transform: translateY(-100%);
+
+}
+
+
+
+#image {
+    z-index: 10;
+}
+
+
+
+#image:checked~.cadre {
+    transform: translateY(0%);
+    transition: all 500ms linear ;
+    animation: shake 500ms ease-in-out 500ms ;
+
+
+}
+
+/* @keyframes appear {
+    from {
+transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(100%);
+        opacity: 1;
+
+
+    }
+
+} */
+
+#image1:checked~.cadre {
+    transition: all 500ms linear ;
+    transform: translateY(0%);
+    animation: shake 500ms ease-in-out 500ms ;
+
+}
+
+@keyframes shake {
+
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+
+
+#image2:checked~.cadre {
+    transform: translateY(0%);
+    transition: all 500ms linear ;
+    animation: shake 500ms ease-in-out 500ms ;
+
+
+
+}
+
+
+
+#image3:checked~.cadre {
+    transform: translateY(0%);
+    transition: all 500ms linear ;
+    animation: shake 500ms ease-in-out 500ms ;
+
+
+
+}
+
+
+
+.cadre h2 {
+    letter-spacing: 1px;
+    color: black;
+    margin-top: 5px;
+    font-family: 'Lobster', cursive;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 2px;
+
+
+}
+
+.cadre p {
+    font-weight: 700;
+    font-size: 19px;
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+
+}
+
+/* .exit {
+    background-image: url(/Images/croixnoir.png);
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 5px;
+    /* left: 180px; 
+    right: 10px;
+    z-index: 3;
+} */
+
+/* #quit:checked~.cadre {
+    animation: hide 1s linear forwards;
+}
+
+@keyframes hide {
+    from {
+        transform: translateZ(0);
+    }
+
+    to {
+        transform: translateZ(50px);
+    }
+}; */
+
+.fleche {
+    width: 50px;
+    height: 50px;
+    margin: 0px 0px 40px 70px;
+    animation: show 800ms linear infinite;
+
+}
+
+@keyframes show {
+    0% {
+        transform: translateY(-15px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(-15px);
+    }
+}
