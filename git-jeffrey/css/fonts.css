@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "Helvetica Now Text";
+    src: url("/assets/fonts/HelveticaNowText-Regular.woff2") format("woff2"),
+        url("/assets/fonts/HelveticaNowText-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Helvetica Now Display";
+    src: url("/assets/fonts/HelveticaNowDisplay-ExtraBold.woff2") format("woff2"),
+        url("/assets/fonts/HelveticaNowDisplay-ExtraBold.woff") format("woff");
+}

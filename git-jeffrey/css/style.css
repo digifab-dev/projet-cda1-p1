@@ -1,0 +1,441 @@
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+::selection {
+    color: white;
+    background: #ec0928;
+}
+
+body {
+    font-family: "Helvetica Now Text", Helvetica, sans-serif;
+    background: #feebee;
+    overflow-x: hidden;
+}
+
+nav {
+    position: sticky;
+    display: flex;
+    z-index: 2;
+    top: 0;
+    align-items: center;
+    justify-content: space-evenly;
+    background: rgba(254, 235, 238, 0.5);
+    border-bottom: .063em solid rgba(254, 235, 238, 0.5);
+    box-shadow: 0 .25em 1.875em rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 250ms ease-out;
+    min-height: 100px;
+}
+
+nav>a:not(.logo) {
+    text-decoration: none;
+    color: #140103;
+    text-transform: uppercase;
+    padding: .5em 1em;
+    transition: all 250ms ease-out;
+    border-radius: 25% 75% 25% 75% / 45% 55% 45% 55%;
+}
+
+nav>a:hover:not(.logo) {
+    background-color: #ec0928;
+    color: white;
+    border-radius: 25% 75% 25% 75% / 45% 55% 45% 55%;
+}
+
+body>nav>.current {
+    background-color: #ec0928;
+    color: white;
+    border-radius: 25% 75% 25% 75% / 45% 55% 45% 55%;
+}
+
+body>nav>.current:hover {
+    background-color: initial;
+    color: initial;
+}
+
+.anim_nav {
+    min-height: 4rem;
+    background: rgba(20, 1, 3, 0.5);
+    border-bottom: .063em solid rgba(254, 235, 238, 0.5);
+}
+
+.anim_nav>a:not(.logo) {
+    color: white;
+}
+
+
+.logo {
+    background-image: url(/assets/logos/logo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    min-height: 4rem;
+    min-width: 4rem;
+    transition: all 250ms ease-out;
+}
+
+.anim_nav>.logo {
+    min-height: 3rem;
+    min-width: 3rem;
+    background-image: url(/assets/logos/logo_white.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+}
+
+h1>span>.logo_in_h {
+    height: 6.5vw;
+    min-height: 10px;
+}
+
+.sct_1 {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    min-width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.sct_1>h1,
+h2,
+h3 {
+    font-size: min(7vw, 7rem);
+    text-align: center;
+    color: white;
+}
+
+h4 {
+    font-size: min(7vw, 7rem);
+    text-align: center;
+}
+
+.sct_1>h1 {
+    font-size: min(14vw, 14rem);
+    font-family: Helvetica Now Display, Helvetica, sans-serif;
+
+}
+
+.sct_1 :nth-child(3) {
+    font-size: min(3.5vw, 3.5rem);
+}
+
+/* BTN PRESENTATION */
+
+.btn {
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    color: black;
+    background: rgb(255, 255, 255);
+    text-transform: uppercase;
+    align-self: center;
+    padding: 1em 2em;
+    border-radius: .25em;
+    font-size: min(1vw, 1rem);
+    transition: all 250ms ease-out;
+    margin: 3.5rem;
+    border: solid 1px black;
+}
+
+.btn:after {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: #ec0928;
+    transition: all 250ms ease-out;
+    border-radius: .25em;
+}
+
+.btn:hover {
+    color: white;
+    border-radius: .25em;
+    border: solid 1px #ec0928;
+    background: #ec0928;
+}
+
+.btn:hover:after {
+    left: 0;
+    width: 100%;
+    border-radius: .25em;
+
+}
+
+.btn:active {
+    top: 4px;
+}
+
+.bg_img_top {
+    position: absolute;
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+    background: no-repeat url(/assets/img/theatre_histrion.webp) center / cover;
+    filter: grayscale(1);
+}
+
+
+.fa-chevron-down {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 0;
+}
+
+.fa-chevron-down:hover {
+    transform: translate(-50%) scale(120%);
+}
+
+.fa-chevron-down:active {
+    transform: translate(-50%) translateY(4px);
+}
+
+.btn_top {
+    position: fixed;
+    right: 1em;
+    bottom: 5em;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.btn_top:active {
+    transform: translateY(-4px);
+}
+
+.sct_2 {
+    display: flex;
+    flex-direction: row;
+    height: 60vh;
+    width: 100%;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+    background-color: #eef36a;
+    padding: 100px;
+}
+
+.sct_2>div :nth-child(2n+2),
+.sct_2>div :nth-child(1) {
+    font-size: min(3vw, 3rem);
+}
+
+.cards_title {
+    background-color: #eef36a;
+    padding-top: 200px;
+}
+
+.cards_title :nth-child(3) {
+    font-size: min(4vw, 4rem);
+}
+
+.cards {
+    display: flex;
+    background: no-repeat #feebee center / cover;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 8px;
+    text-align: center;
+    padding: 1rem;
+    min-width: 25%;
+    min-height: 50vh;
+    transition: all 250ms ease-out;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+
+}
+
+.cards:hover {
+    transform: scale(1.01);
+}
+
+.cards>p {
+    padding: 1rem;
+}
+
+.bg_card_1 {
+    background: no-repeat url(/assets/img/repertoire_histrion.webp) center / cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    transition: all 250ms ease-out;
+}
+
+
+.bg_card_2 {
+    background: no-repeat url(/assets/img/troupe_histrion_8.webp) center / cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    transition: all 250ms ease-out;
+
+}
+
+.bg_card_3 {
+    background: no-repeat url(/assets/img/theatre_histrion_8.webp) center / cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    transition: all 250ms ease-out;
+
+}
+
+.bg_card_1:hover,
+.bg_card_2:hover,
+.bg_card_3:hover {
+    cursor: pointer;
+}
+
+.bg_card_1:active {
+    transform: scale(2) translateX(50%);
+    background-size: contain;
+
+}
+
+.bg_card_2:active {
+    transform: scale(2);
+    background-size: contain;
+}
+
+.bg_card_3:active {
+    transform: scale(2) translateX(-50%);
+    background-size: contain;
+
+}
+
+.devise_q {
+    display: block;
+    text-align: center;
+    font-size: min(7vw, 7rem);
+
+}
+
+.devise_p {
+    display: block;
+    text-align: center;
+    font-size: min(1vw, 1rem);
+}
+
+.titre_photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titre {
+    background: #9FD0B7;
+}
+
+.deco_home {
+    background: #ec0928;
+    height: 8px;
+    width: 16rem;
+    border-radius: 25% 75% 25% 75% / 45% 55% 45% 55%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.grille {
+    max-width: 120em;
+    width: 80%;
+    margin: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 480px);
+    justify-content: center;
+    grid-gap: 1em;
+    padding: 2rem 0;
+}
+
+.grid-item {
+    width: 480px;
+    height: 300px;
+    object-fit: cover;
+    transition: all 250ms ease-out;
+    border-radius: 8px;
+    filter: grayscale(0);
+}
+
+.grid-item:hover {
+    filter: grayscale(1);
+}
+
+.grille :nth-child(2),
+.grille :nth-child(14) {
+    text-decoration: none;
+    color: #140103;
+    font-size: min(3.5vw, 4rem);
+    text-align: center;
+    margin: auto;
+    transition: all 250ms ease-out;
+
+}
+
+.grille :nth-child(2):hover,
+.grille :nth-child(14):hover {
+    text-transform: capitalize;
+}
+
+footer>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4em;
+    padding: 0 5%;
+    background: #140103;
+    color: white;
+    position: relative;
+}
+
+footer>div>div>p>a {
+    text-decoration: none;
+    color: white;
+}
+
+footer>div>div>p>a:hover {
+    color: #ec0928;
+}
+
+footer>div>div>p :nth-child(3),
+.icon {
+    color: #ec0928;
+}
+
+footer>div>div>a>.icon {
+    color: white;
+}
+
+footer>div>div>a>.icon:hover {
+    color: #ec0928;
+}
+
+
+.histrion {
+    font-family: "Helvetica Now Display";
+}
+
+
+.wave {
+    display: block;
+
+}
+
+.wave_1 {
+    background: #eef36a;
+}

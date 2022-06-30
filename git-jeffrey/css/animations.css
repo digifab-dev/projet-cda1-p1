@@ -1,0 +1,52 @@
+/* ANIMATION TEXTE */
+
+.anim-text {
+    animation: anim-text 1.5s cubic-bezier(.55, .085, .68, .53);
+}
+
+@keyframes anim-text {
+    0% {
+        filter: blur(12px);
+        opacity: 0
+    }
+
+    100% {
+        filter: blur(0);
+        opacity: 1
+    }
+}
+
+/* ANIMATION IMAGE */
+
+.zoom-out {
+    animation: zoom-out 5s ease-out reverse both;
+}
+
+@keyframes zoom-out {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+/* ANIMATION VIDEO */
+
+.open-vid {
+    animation: open-vid 1.5s cubic-bezier(.25, .46, .45, .94) both;
+}
+
+
+@keyframes open-vid {
+    0% {
+        transform: scaleX(0);
+        opacity: 1
+    }
+
+    100% {
+        transform: scaleX(1);
+        opacity: 1
+    }
+}
