@@ -19,7 +19,7 @@
   </head>
 
   <body>
-    <section class="header">
+    <section class="header" id="haut">
       <div>
         <h1>Pamplemousse : L'Exposition éphémère</h1>
       </div>
@@ -52,7 +52,7 @@
       </div>
     </section>
 
-    <section class="nav">
+    <section class="nav" id="retourMenu">
       <!-- définissons le container date -->
       <div class="date">
         <!-- définition les colonnes donc les 4 cubes chiffre -->
@@ -106,10 +106,19 @@
       <div class="frise">
         <p>
           Exposition éphémère du pamplemousse Exposition éphémère du
-          pamplemousse Exposition éphémère du pamplemousse Exposition éphémère du pamplemousse Exposition éphémère du
-          pamplemousse Exposition éphémère du pamplemousse
+          pamplemousse Exposition éphémère du pamplemousse Exposition éphémère
+          du pamplemousse Exposition éphémère du pamplemousse Exposition
+          éphémère du pamplemousse Exposition éphémère du pamplemousse Exposition éphémère du
+          pamplemousse Exposition éphémère du pamplemousse Exposition éphémère
+          du pamplemousse Exposition éphémère du pamplemousse Exposition
+          éphémère du pamplemousse Exposition éphémère du pamplemousse Exposition éphémère du
+          pamplemousse Exposition éphémère du pamplemousse Exposition éphémère
+          du pamplemousse Exposition éphémère du pamplemousse Exposition
+          éphémère du pamplemousse Exposition éphémère du pamplemousse Exposition éphémère du
+          pamplemousse Exposition éphémère du pamplemousse Exposition éphémère
+          du pamplemousse Exposition éphémère du pamplemousse Exposition
+          éphémère du pamplemousse
         </p>
-        <!-- <p>Exposition éphémère du <span class="pamp">pamplemousse</span> Exposition éphémère du <span class="pamp">pamplemousse</span> Exposition éphémère du <span class="pamp">pamplemousse</span></p> -->
       </div>
     </section>
 
@@ -164,6 +173,14 @@
           </div>
         </div>
       </div>
+
+      <div class="retour">
+        <a href="#retourMenu">
+          <p class="up">Revenir au menu</p>
+          <i class="fa-solid fa-up-long"></i>
+        </a>
+      </div>
+
     </section>
 
     <section id="animations">
@@ -189,7 +206,7 @@
               enfants”
             </p>
             <div class="btnFinCT">
-              <a class="btnFin" href="#"
+              <a class="btnFin" href="#lienContact"
                 >S’inscrire via le formulaire de contact</a
               >
             </div>
@@ -220,16 +237,16 @@
           </div>
         </div>
       </div>
+
+      <div class="retour">
+        <a href="#retourMenu">
+          <p class="up">Revenir au menu</p>
+          <i class="fa-solid fa-up-long"></i>
+        </a>
+      </div>
+      
     </section>
 
-    <section class="containerFrise">
-      <div class="frise">
-        <p>
-          Exposition éphémère du pamplemousse Exposition éphémère du
-          pamplemousse Exposition éphémère du pamplemousse
-        </p>
-      </div>
-    </section>
 
     <section id="reservations">
       <h2>Réservations<br />& Contact</h2>
@@ -253,12 +270,15 @@
             <span class="couleur">10€, au lieu de 15€.</span>
           </p>
 
+
+
+
           <div class="paiement">
             <div class="place">
               <p>Nombre de places adultes :</p>
               <div class="nombrePlace">
                 <button type="button" name="button" class="moins">-</button>
-                <input type="number" placeholder="0" min="0" />
+                <input type="number" placeholder="0" min="0" class="number"/>
                 <button type="button" name="button" class="plus">+</button>
               </div>
             </div>
@@ -266,7 +286,7 @@
             <div class="prixTotal">
               <p>Prix total :</p>
               <div class="euros">
-                <input type="number" placeholder="--" min="0" /><span>€</span>
+                <input type="number" placeholder="--" min="0" class="total" /><span>€</span>
               </div>
             </div>
 
@@ -276,6 +296,11 @@
           </div>
         </div>
       </div>
+
+
+
+
+
 
       <div class="infoContact">
         <div class="info">
@@ -292,7 +317,7 @@
             <a class="btnFin" href="#">Ajouter à mon agenda</a>
           </div>
         </div>
-        <div class="contact">
+        <div class="contact" id="lienContact">
           <h3>Contact :</h3>
           <form action="" method="get">
             <label for="" class="nom">
@@ -335,13 +360,20 @@
           </form>
         </div>
       </div>
+
+      <div class="retour">
+        <a href="#haut">
+          <p class="up">Revenir en haut</p>
+          <i class="fa-solid fa-up-long"></i>
+        </a>
+      </div>
     </section>
 
     <section class="maps">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1440.4953121198828!2d7.496805780897663!3d43.7730534556251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cde961f6485087%3A0x9fdd691b3059d185!2sJardins%20Biov%C3%A8s!5e0!3m2!1sfr!2sfr!4v1656507914613!5m2!1sfr!2sfr"
         width="600"
-        height="450"
+        height="200"
         style="border: 0"
         allowfullscreen=""
         loading="lazy"

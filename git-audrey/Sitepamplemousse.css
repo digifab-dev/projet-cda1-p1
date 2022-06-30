@@ -243,6 +243,25 @@ input {
   flex-wrap: wrap;
 }
 
+/* bouton revenir en haut */
+.retour {
+  display: flex;
+  justify-content: flex-end;
+  text-align: end;
+  margin: 5px 50px 20px 0;
+}
+
+.fa-up-long {
+  color: #F27A6A;
+}
+
+.up {
+  font-size: 10px;
+  color: #F27A6A;
+  display: inline;
+}
+
+
 /* Date */
 
 .date {
@@ -379,68 +398,23 @@ li a:hover:before {
 
 .containerFrise {
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   overflow: hidden;
   width: 100%;
+  justify-content: center;
 }
 
-/* .containerFrise.scroll {
-  scroll-snap-type: x mandatory, steps(100px);
-  scroll-snap-points-x: repeat(100px);
-} */
-
 .frise {
-  font-size: 50px;
-  line-height: 1;
+  font-size: 80px;
+  line-height: .5;
   text-transform: uppercase;
   color: black;
-  /* text-shadow: -1px 1px 15px#f26351, 1px 1px 10px #f26351; */
   text-shadow: -1px 1px 2px #f26351, 0 1px 0 #f26351, -1px 0 0 #f26351, 0 -1px 0 #f26351;
   font-family: "Concert One";
   white-space: nowrap;
 }
 
-/* .frise.scroll {
-  transform: translateX(-50%);
-  transition: all 1s ease infinite steps(10px);
-} */
 
-/* .pamp {
-  color: #f26351;
-} */
-
-/* .frise1 {
-  animation: frise1 11s linear infinite;
-}
-
-@keyframes frise1 {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-45%);
-  }
-}
-
-.pamp {
-  color: #f26351;
-}
-
-.frise2 {
-  animation: frise2 11s linear infinite;
-}
-
-@keyframes frise2 {
-  from {
-    transform: translateX(-45%);
-  }
-
-  to {
-    transform: translateX(0);
-  }
-} */
 
 /* Mise-en-forme des sections */
 
@@ -454,14 +428,11 @@ li a:hover:before {
 h2 {
   font-size: 7vw;
   text-transform: uppercase;
-  background-image: linear-gradient(to left,#FDE382,#FAB471,#F27A6A,#F26351,#FD4843,#F26351,#F27A6A,#FAB471);
+  background-image: linear-gradient(to bottom,#FD4843, #F26351, #F27A6A, #FAB471, #FDE382);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
   color: transparent;
-  /* color: black; */
-  /* text-shadow: -3px 5px 2px #f26351, 0 3px 0 #f26351, -1px 0 0 #f26351,
-    0 -1px 0 #f26351; */
   letter-spacing: 0.5em;
   text-align: center;
 }
@@ -649,6 +620,7 @@ h3 {
 .euros input {
   width: 50px;
   text-align: center;
+  font-family: "Krona One", sans-serif !important;
 }
 
 .nombrePlace input::placeholder,
@@ -678,7 +650,7 @@ h3 {
   font-weight: 100;
   position: absolute;
   right: 17px;
-  bottom: 7px;
+  bottom: 8px;
 }
 
 /* Pour faire disparaitre les fleche automatique de l'input type number */
@@ -691,10 +663,6 @@ input[type="number"]::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
-
-/* .paiement .btnFinCT {
-  align-self: center;
-} */
 
 .tarifs .btnFin {
   width: 100px;
@@ -778,7 +746,7 @@ form span {
   top: 0;
   padding: 15px;
   pointer-events: none;
-  font-size: 1.1em;
+  font-size: .9em;
   color: #f2645158;
 }
 
@@ -809,6 +777,8 @@ form .btnFinCT {
   width: 130px;
   align-self: center;
 }
+
+
 
 /* maps */
 iframe {
