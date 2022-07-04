@@ -25,18 +25,16 @@ Navbar https://skiff.com/
 
 Glassmorphism https://css.glass/
 
-Section vague https://getwaves.io/
+Vague SVG https://getwaves.io/
 
-Logo (modifié sur illustrator) https://www.freelogodesign.org/
+Logo https://www.freelogodesign.org/  (modifié sur illustrator)
 
 Palette couleurs https://coolors.co/
 
 Icons https://fontawesome.com/
 
 Astuces https://developer.mozilla.org/fr/
-https://www.w3schools.com/
-
-Tutos https://www.youtube.com/c/LeDesignerduWeb
+https://www.w3schools.com/ https://www.youtube.com/c/LeDesignerduWeb
 
 Border radius https://9elements.github.io/fancy-border-radius/
 

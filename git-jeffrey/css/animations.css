@@ -1,45 +1,50 @@
-/* ANIMATION TEXTE */
+/* ANIMATION TEXTE*/
 
 .anim-text {
-    animation: anim-text 1.5s cubic-bezier(.55, .085, .68, .53);
+    animation: anim-text 2.5s ease-in both;
 }
 
 @keyframes anim-text {
     0% {
         filter: blur(12px);
-        opacity: 0
+        opacity: 0;
+        transform: scale(0);
+
     }
 
     100% {
         filter: blur(0);
-        opacity: 1
+        opacity: 1;
+        transform: scale(1);
+
     }
 }
+
 
 /* ANIMATION IMAGE */
 
 .zoom-out {
-    animation: zoom-out 5s ease-out reverse both;
+    animation: zoom-out 5s ease-in both;
 }
 
 @keyframes zoom-out {
     0% {
-        transform: scale(1);
+        transform: scale(1.5);
     }
 
     100% {
-        transform: scale(1.5);
+        transform: scale(1);
     }
 }
 
 /* ANIMATION VIDEO */
 
-.open-vid {
-    animation: open-vid 1.5s cubic-bezier(.25, .46, .45, .94) both;
+.anim-vid {
+    animation: anim-vid 2.5s ease-in both;
 }
 
 
-@keyframes open-vid {
+@keyframes anim-vid {
     0% {
         transform: scaleX(0);
         opacity: 1
@@ -48,5 +53,54 @@
     100% {
         transform: scaleX(1);
         opacity: 1
+    }
+}
+
+/* APPARITION ELEMENTS */
+
+@keyframes apparition-bas {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes apparition-haut {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes apparition-gauche {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes apparition-droite {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
     }
 }

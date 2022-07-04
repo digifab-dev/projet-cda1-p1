@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Histrion : le théâtre, le vrai.">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/animations.css">
     <link rel="stylesheet" href="/css/contact.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@1&family=Noto+Sans&family=Noto+Serif+Display&family=Playfair+Display&family=Poppins&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="/css/presentation.css">
     <script src="https://kit.fontawesome.com/897b662d7f.js" crossorigin="anonymous"></script>
     <title>Contact | Histrion</title>
 </head>
@@ -25,19 +24,41 @@
         <a class="current" href="contact.html">Contact</a>
     </nav>
     <main>
-
         <section class="sct-form">
-            <h1>Contact</h1>
-            <div>
-                <form class="form" action="" method="post">
-                    <input type="text" name="prenom" placeholder="Prénom" required>
-                    <input type="text" name="nom" placeholder="NOM" required>
-                    <input type="email" name="courriel" placeholder="Courriel" required>
-                    <textarea name="message" placeholder="Votre message" rows="8" cols="80" required></textarea>
-                    <input type="submit" name="" value="Envoyer">
+            <div class="left">
+                <div class="img-bg-l"></div>
+                <h1>Contact</h1>
+
+                <p>Notre théâtre <strong>Histrion</strong> est ouvert du <strong>lundi</strong> au
+                    <strong>dimanche</strong>
+                    de <strong>14h</strong> à <strong>23h</strong> pour les représentations.
+                </p>
+                <br>
+                <p>Nous proposons également des <strong>visites guidées</strong> tous les <strong>samedi</strong> et
+                    <strong>dimanche</strong> à <strong>11h</strong>. <br> Elles retracent l'histoire et le
+                    fonctionnement
+                    du théâtre à travers sa collection d'œuvres d'art.
+                </p>
+            </div>
+            <div class="right">
+                <div class="img-bg-r"></div>
+
+                <form action="https://www.formbackend.com/f/329f8d2618b3593b" method="post">
+
+                    <label for="prenom">Prénom</label>
+                    <input type="text" name="prenom" placeholder="Jean-Baptiste" required>
+
+                    <label for="nom">NOM</label>
+                    <input type="text" name="nom" placeholder="POQUELIN" required>
+                    
+                    <label for="courriel">Courriel</label>
+                    <input type="email" name="courriel" placeholder="jb.poquelin@mailo.fr" required>
+
+                    <label for="message">Votre message</label>
+                    <textarea name="message" placeholder="Coucou !" rows="8" cols="80" required></textarea>
+                    <input class="btn btn-contact" type="submit" name="" value="Envoyer">
                 </form>
             </div>
-            <div class="bg-form"></div>
         </section>
 
         <section class="sct-maps">
@@ -57,7 +78,6 @@
                         Histrion </a>・ MMXXII
                     ・ Fait avec <span>&#10084;</span> par Jeffrey</a></p>
             </div>
-            <!-- <audio controls muted src="/assets/music/ES_The Guiding Light - Christoffer Moe Ditlevsen.mp3"></audio> -->
             <div>
                 <a href="https://www.instagram.com/vaaljeef" target="_blank"><i
                         class="fa-brands fa-instagram fa-2xl icon"></i></a>

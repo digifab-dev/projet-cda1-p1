@@ -42,7 +42,7 @@
 
 
 .txt_presentation_theatre {
-    width: 60%;
+    width: 50%;
     text-align: justify;
     margin: auto;
     padding: 100px;
@@ -50,7 +50,8 @@
 }
 
 .txt_presentation_theatre>h2 {
-    color: black;
+    color: inherit;
+    font-family: "Helvetica Now Display";
 }
 
 .txt_presentation_theatre>p {
@@ -58,9 +59,8 @@
 }
 
 .img_presentation_theatre {
-    width: 40%;
-    background: no-repeat url(/assets/img/theatre_histrion_6.webp) center / cover;
-    border-radius: 25% 75% 25% 75% / 45% 55% 45% 55%;
+    width: 50%;
+    background: no-repeat url(/assets/img/hanging_wall_sign_histrion.png) center / cover;
 }
 
 .stick {
@@ -68,6 +68,7 @@
     top: 64px;
     display: flex;
     flex-wrap: wrap;
+    height: 100vh;
     /* border: solid 5px #140103; */
 }
 
@@ -85,7 +86,7 @@
 .name {
     font-family: 'IM Fell English', serif;
     font-size: min(3vw, 3rem);
-    color: black;
+    color: inherit;
 }
 
 .deco {
@@ -99,13 +100,13 @@
 
 #troupe {
     background: linear-gradient(#feebee, #FDDDE2);
-    color: black;
+    color: inherit;
     padding: 7rem;
 }
 
 .sct_3_pondi {
     background: linear-gradient(#FDDDE2, #FCCFD6);
-    height: 80vh;
+
 }
 
 .pondi_img {
@@ -115,7 +116,7 @@
 
 .sct_4_noam {
     background: linear-gradient(#FCCFD6, #FAB3BD);
-    height: 80vh;
+
 }
 
 .noam_img {
@@ -125,7 +126,7 @@
 
 .sct_5_michel {
     background: linear-gradient(#FAB3BD, #875A60);
-    height: 80vh;
+
 }
 
 .sct_5_michel>div>h3 {
@@ -140,7 +141,6 @@
 .sct_6_suliane {
     color: white;
     background: linear-gradient(#875A60, #140103);
-    height: 100vh;
 }
 
 .suliane_img {
@@ -151,11 +151,3 @@
 .sct_6_suliane>div>h3 {
     color: white;
 }
-
-footer {
-    border-top: .063em solid rgba(254, 235, 238, 0.026);
-}
-
-/* .wave-ft {
-    background: linear-gradient(#875A60, #140103);
-} */

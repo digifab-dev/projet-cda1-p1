@@ -25,3 +25,25 @@ btn.addEventListener('click', () => {
         left: 0,
     })
 })
+
+
+// Apparition au scroll
+
+function apparition() {
+    var apparitions = document.querySelectorAll(".apparition");
+  
+    for (var i = 0; i < apparitions.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = apparitions[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+  
+      if (elementTop < windowHeight - elementVisible) {
+        apparitions[i].classList.add("active");
+      } else {
+        apparitions[i].classList.remove("active");
+      }
+    }
+  }
+  
+  window.addEventListener("scroll", apparition);
+  

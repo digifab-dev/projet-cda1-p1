@@ -13,13 +13,15 @@ html {
 
 ::selection {
     color: white;
-    background: #ec0928;
+    background: #0f4d5c;
 }
 
 body {
     font-family: "Helvetica Now Text", Helvetica, sans-serif;
     background: #feebee;
+    color: #140103;
     overflow-x: hidden;
+    cursor: url(/assets/img/cursor.png), auto;
 }
 
 nav {
@@ -29,8 +31,8 @@ nav {
     top: 0;
     align-items: center;
     justify-content: space-evenly;
-    background: rgba(254, 235, 238, 0.5);
-    border-bottom: .063em solid rgba(254, 235, 238, 0.5);
+    background: rgba(255, 255, 255, 0.5);
+    border-bottom: .063em solid rgba(255, 255, 255, 0.5);
     box-shadow: 0 .25em 1.875em rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -67,7 +69,7 @@ body>nav>.current:hover {
 .anim_nav {
     min-height: 4rem;
     background: rgba(20, 1, 3, 0.5);
-    border-bottom: .063em solid rgba(254, 235, 238, 0.5);
+    border-bottom: .063em solid rgba(255, 255, 255, 0.5);
 }
 
 .anim_nav>a:not(.logo) {
@@ -120,6 +122,8 @@ h3 {
 h4 {
     font-size: min(7vw, 7rem);
     text-align: center;
+    font-family: "Helvetica Now Display";
+
 }
 
 .sct_1>h1 {
@@ -220,29 +224,41 @@ h4 {
 
 .sct_2 {
     display: flex;
-    flex-direction: row;
-    height: 60vh;
-    width: 100%;
+    height: auto;
+    width: auto;
     justify-content: space-evenly;
     align-content: center;
-    flex-wrap: wrap;
-    background-color: #eef36a;
-    padding: 100px;
+    background-color: #B39499;
 }
 
-.sct_2>div :nth-child(2n+2),
-.sct_2>div :nth-child(1) {
-    font-size: min(3vw, 3rem);
+@media screen and (max-width: 600px) {
+    .sct_2 {
+        flex-direction: column;
+    }
+}
+
+
+
+.sct_2>div :nth-child(2n+2) {
+    font-size: min(3.5vw, 3.5rem);
+    font-family: "Helvetica Now Display";
+
 }
 
 .cards_title {
-    background-color: #eef36a;
-    padding-top: 200px;
+    background-color: #B39499;
+    padding: 200px 0 100px 0;
+    position: relative;display: block;
+}
+
+.cards_title :nth-child(1) {
+    font-family: "Helvetica Now Display";
 }
 
 .cards_title :nth-child(3) {
-    font-size: min(4vw, 4rem);
+    font-size: min(3.5vw, 3.5rem);
 }
+
 
 .cards {
     display: flex;
@@ -253,27 +269,28 @@ h4 {
     border-radius: 8px;
     text-align: center;
     padding: 1rem;
-    min-width: 25%;
-    min-height: 50vh;
+    width: 400px;
+    height: 500px;
     transition: all 250ms ease-out;
-    box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
-
+    box-shadow: 15px 20px 16px rgba(20, 1, 3, 0.3);
 }
 
 .cards:hover {
-    transform: scale(1.01);
+    transform: scale(1.05);
 }
 
 .cards>p {
-    padding: 1rem;
+    margin: 1rem;
+    font-size: min(1.75vw, 1.75rem);
 }
 
 .bg_card_1 {
-    background: no-repeat url(/assets/img/repertoire_histrion.webp) center / cover;
+    background: no-repeat url(/assets/img/repertoire_histrion.webp) center;
     width: 100%;
     height: 100%;
     border-radius: 8px;
     transition: all 250ms ease-out;
+    border: solid 1px #140103;
 }
 
 
@@ -283,6 +300,7 @@ h4 {
     height: 100%;
     border-radius: 8px;
     transition: all 250ms ease-out;
+    border: solid 1px #140103;
 
 }
 
@@ -292,43 +310,31 @@ h4 {
     height: 100%;
     border-radius: 8px;
     transition: all 250ms ease-out;
+    border: solid 1px #140103;
 
 }
 
-.bg_card_1:hover,
-.bg_card_2:hover,
-.bg_card_3:hover {
-    cursor: pointer;
-}
 
-.bg_card_1:active {
-    transform: scale(2) translateX(50%);
-    background-size: contain;
-
-}
-
-.bg_card_2:active {
-    transform: scale(2);
-    background-size: contain;
-}
-
-.bg_card_3:active {
-    transform: scale(2) translateX(-50%);
-    background-size: contain;
-
-}
 
 .devise_q {
     display: block;
     text-align: center;
     font-size: min(7vw, 7rem);
+    margin: 5rem;
+    font-family: "Helvetica Now Display";
 
 }
 
 .devise_p {
     display: block;
     text-align: center;
-    font-size: min(1vw, 1rem);
+    font-size: min(3.5vw, 3.5rem);
+}
+
+.devise_p_traduction {
+    display: block;
+    text-align: center;
+    font-size: min(1.75vw, 1.75rem);
 }
 
 .titre_photo {
@@ -338,7 +344,7 @@ h4 {
 }
 
 .titre {
-    background: #9FD0B7;
+    background: #82B38C;
 }
 
 .deco_home {
@@ -426,16 +432,35 @@ footer>div>div>a>.icon:hover {
 }
 
 
-.histrion {
-    font-family: "Helvetica Now Display";
-}
-
 
 .wave {
     display: block;
-
 }
 
-.wave_1 {
-    background: #eef36a;
+.apparition {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease-out;
+}
+
+.apparition.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.active.apparition-bas {
+    animation: apparition-bas 1s ease-out;
+}
+
+.active.apparition-haut {
+    animation: apparition-haut 1s ease-out;
+}
+
+.active.apparition-gauche {
+    animation: apparition-gauche 1s ease-out;
+}
+
+.active.apparition-droite {
+    animation: apparition-droite 1s ease-out;
 }
