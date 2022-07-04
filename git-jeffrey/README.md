@@ -10,7 +10,7 @@ Favicon https://favicon.io/
 
 Compression vidéo https://www.freeconvert.com/video-compressor https://videocandy.com/ https://kamua.com/tinyvid
 
-Compression vidéo https://imagecompressor.com/
+Compression image https://imagecompressor.com/
 
 Convertisseur WebP https://convertio.co/fr/
 Convertisseur px > rem https://nekocalc.com/fr/px-a-rem-convertisseur
