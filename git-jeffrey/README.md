@@ -4,9 +4,9 @@
 
 ### Sources et inspirations :
 
->https://www.comedie-francaise.fr/ (textes et images)
+><a href="https://www.comedie-francaise.fr/" target="_blank">comedie-francaise.fr</a> (textes et images)
 >
->https://skiff.com/ (NavBar)
+><a href="https://skiff.com/" target="_blank">skiff.com</a> (NavBar)
 
 ---
 
