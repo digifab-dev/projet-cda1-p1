@@ -1,0 +1,14 @@
+body{
+    // Toggle thme
+    color: var(--black);
+    background: var(--white);
+    transition: background 500ms ease-in-out, color 1000ms ease-in-out;
+    &.light {
+        --bg: var(--white);
+        --text: var(--black);
+    }
+    &.dark {
+        --bg: var(--black);
+        --text: var(--white);
+    }
+}

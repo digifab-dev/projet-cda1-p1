@@ -1,0 +1,18 @@
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./utils/animations";
+
+@import "./bases/global";
+@import "./bases/typographie";
+@import "./bases/elements";
+
+@import "./themes/toggle";
+
+@import "./components/header";
+@import "./components/footer";
+
+@import "./layouts/main";
+
+@import "./pages/claquettes";
+@import "./pages/chaussettes";
+// sass --watch  .\style.scss .\style.css

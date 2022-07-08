@@ -1,0 +1,206 @@
+#headerNav {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  #logoNav {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex: 1 1 250px;
+    z-index: 2;
+    background: $bg-header;
+    figure {
+      height: 100%;
+      width: 80px;
+      overflow: hidden;
+      img {
+        height: 100%;
+        position: relative;
+        // right: 0px;
+      }
+    }
+    h1 {
+      margin-left: 10px;
+      span {
+        display: block;
+        margin-left: 10px;
+        @include medium {
+          display: inline;
+          margin-left: 0px;
+          position: relative;
+          top: 35px;
+          margin-left: -20px;
+        }
+      }
+      a {
+        position: relative;
+        transition: all 0.4s ease;
+      }
+      &.claquetteActive {
+        a {
+          &:nth-child(1) {
+            color: $blue;
+            text-decoration: underline 4px solid $orange;
+            left: 0;
+          }
+          &:nth-child(2) {
+            text-decoration: underline 4px solid $blue;
+            color: $orange;
+            left: 0;
+          }
+        }
+      }
+      &.chaussetteActive {
+        a {
+          &:nth-child(1) {
+            text-decoration: underline 4px solid $blue;
+            color: $orange;
+            left: 20px;
+            @include medium{
+              left: 100px;
+            }
+          }
+          &:nth-child(2) {
+            color: $blue;
+            text-decoration: underline 4px solid $orange;
+            left: -20px;
+            @include medium{
+              left: -100px;
+            }
+          }
+        }
+      }
+    }
+
+    &:hover {
+      figure {
+        background: url("../file/gif-header/signe-j.gif");
+        background-size: 100% 100%;
+      }
+      img {
+        display: none;
+      }
+    }
+  }
+  #userNav {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 0 1 100px;
+    z-index: 2;
+    background: $bg-header;
+    button {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: none;
+      background: linear-gradient(115deg, #205df8 4%, #bbccf8 70%);
+      color: $orange;
+    }
+  }
+  #cart {
+    position: absolute;
+    top: -150px;
+    right: 0;
+    background: $bg-header;
+    width: 100%;
+    min-height: 110px;
+    padding-top: 15px;
+    transition: all 0.4s ease;
+    z-index: 1;
+    @include medium {
+      width: 500px;
+    }
+    &.active {
+      top: 80px;
+      button {
+        opacity: 1;
+      }
+    }
+    header {
+      height: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 10px;
+      button {
+        padding: 5px 10px;
+        background: #289706;
+        border: 4px solid #34dc00;
+        border-radius: 5px;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #fff;
+      }
+    }
+    #articles {
+      height: 100px;
+      overflow: auto;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+    .article {
+      width: 100%;
+      height: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-right: 5px;
+      figure {
+        height: 100%;
+        width: 70px;
+        display: flex;
+        align-items: center;
+        img {
+          height: 100%;
+          width: 100%;
+        }
+        figcaption {
+          width: 90px;
+          font-size: 15px;
+          text-align: center;
+          white-space: nowrap;
+        }
+      }
+      .hyphen {
+        width: 10px;
+        text-align: center;
+        &:nth-child(2) {
+          margin-left: 90px;
+        }
+      }
+      .details {
+        font-size: 15px;
+        .colorProduct{
+          width: 8px;
+          height: 8px;
+          background-color: #000;
+          display: inline-block;
+        }
+      }
+    }
+    footer {
+      position: absolute;
+      top: calc(100% - 11px);
+      left: 80%;
+      width: 50px;
+      height: 25px;
+      button {
+        width: 100%;
+        height: 100%;
+        border: 3px solid $orange;
+        padding-top: 2px;
+        color: $blue;
+        background: $bg-header;
+        opacity: 0;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+}

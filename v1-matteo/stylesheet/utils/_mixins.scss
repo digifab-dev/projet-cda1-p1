@@ -1,0 +1,15 @@
+@mixin border($size: 1px, $color: #000){
+    border: $size solid $color;
+}
+
+@mixin medium {
+    @media all and (min-width: map-get($breakpoints, medium)){
+        @content;
+    }
+}
+
+@mixin large {
+    @media all and (min-width: map-get($breakpoints, large)){
+        @content;
+    }
+}
