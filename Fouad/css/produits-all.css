@@ -1,0 +1,789 @@
+:root {
+  /* Color */
+
+  /* =============== Google polices (Font) ================= */
+
+  /* =============== couleurs (colores) ================= */
+  --first-color: #f2a20c;
+  --white-color: #e9eaec;
+  --dark-color: #272d40;
+  --dark-color-lighten: #f2f5ff;
+  /* =============== source et typographie ================= */
+  --body-font: "Poppins", sans-serif;
+  --h1-font-sieze: 80px;
+  --h1-font-sieze-name: 160px;
+  --h2-font-sieze: 1.875rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.875rem;
+
+  /* =============== colors ================= */
+
+  --color-Noir-gris: #1b1b1b;
+  --color-Blanc-gris: #f2f2f2;
+  --color-btngoup: #ff450c;
+  --color-h1: #333;
+  --color-header-bg: #333;
+  --color-home-id-babch: #2b2d39;
+
+  /* font */
+  --font: poppins;
+  /* scroll smooth  */
+  scroll-behavior: smooth;
+}
+
+/* < !-- ------------------------------------- général ------------------------------------- --> */
+@font-face {
+  font-family: "arabi";
+  src: url(../assets/fonts/Futura-Condensed-Extra-Bold.woff) format("woff2");
+  src: url(../assets/fonts/Futura-Condensed-Extra-Bold.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Sabana";
+  src: url(../assets/fonts/sabana-webfont.woff2) format("woff2");
+  src: url(../assets/fonts/sabana-webfont.woff) format("woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+/* -------------------------------------------------------- grid-options-12-1140  -------------------------------------------------------- */
+/* .grid-options-12-1140 {
+  width: 1140px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #0234fa;
+  position: fixed;
+  z-index: 100;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+.col{
+  width: 65px;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(252, 0, 0, 0.05);
+  margin: 0 15px;
+}
+
+.n-1{
+  margin-left: 0;
+}
+.n-12{
+  margin-right: 0;
+} */
+
+/* < !-- ------------------------------------- BODY ------------------------------------- --> */
+
+/* < !-- ------------------------------------- header - logo - menu - icons ------------------------------------- --> */
+
+/* < !-- ------------------------------------- menu navigation  ------------------------------------- --> */
+header {
+  width: 100vw;
+  background: #1a1b1f;
+  position: fixed;
+  z-index: 99;
+}
+/* -- menu - icons --------------------------------- */
+.navigation {
+  width: clamp(425px, 100%, 1140px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  margin: auto;
+  background-color: #1a1b1f;
+  /* border: 1px solid #fff; */
+  z-index: 99;
+  flex-wrap: wrap;
+}
+
+.navigation .menu-icon {
+  cursor: pointer;
+  float: right;
+  padding: 20px 10px;
+  z-index: 100;
+}
+
+.navigation .menu-icon .nav-icon {
+  background-color: #fff;
+  display: block;
+  height: 2px;
+  width: 25px;
+  position: relative;
+  transition: background 0.2s ease-out;
+}
+
+.navigation .menu-icon .nav-icon::before,
+.navigation .menu-icon .nav-icon::after {
+  content: "";
+  background-color: #fff;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: all ease-out 0.2s;
+}
+
+.navigation .menu-icon .nav-icon::before {
+  top: 8px;
+}
+
+.navigation .menu-icon .nav-icon::after {
+  top: -8px;
+}
+
+.navigation .menu-btn:checked ~ .menu-icon .nav-icon {
+  background-color: transparent;
+}
+
+.navigation .menu-btn:checked ~ .menu-icon .nav-icon::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.navigation .menu-btn:checked ~ .menu-icon .nav-icon::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.menu-btn {
+  display: none;
+}
+/* --menu--------------------------------- */
+.menu {
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #111111f1;
+  flex-wrap: wrap;
+  /* background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.1),
+    rgba(255, 255, 255, 0)
+    );
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px); */
+  z-index: 98;
+  animation: MrYou 0.3s;
+}
+
+.menu li a {
+  color: white;
+  margin: 0px 20px;
+  font-size: clamp(20px, 5vw, 40px);
+  transition: all ease 0.3s;
+  /* flex: 1 1 auto; */
+}
+
+.menu li a:hover {
+  font-size: 2.3rem;
+  color: #ff450c;
+  transition: all ease 0.3s;
+}
+
+.navigation .menu-btn:checked ~ .menu {
+  display: flex;
+}
+@media screen and (max-width: 900px) {
+  .menu li a {
+    color: red;
+    margin: 0 100px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* --keyfreames - MrYou-------------------------- */
+@keyframes MrYou {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* --logo--------------------------------- */
+.logo {
+  display: flex;
+  font-family: "Sabana";
+  color: #fff;
+  font-size: clamp(36px, 6vw, 50px);
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0px auto;
+  /* letter-spacing: .4rem; */
+}
+/* --nav-col3--------------------------------- */
+.nav-col3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --search-box--------------------------------- */
+.search-box {
+  background-color: #d1d1d111;
+  padding: 3px 20px;
+  border-radius: 20px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 20px;
+}
+.search-box input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+}
+
+.search-box input::placeholder {
+  color: #ffffff5e;
+}
+
+.search-box button {
+  background-color: transparent;
+  color: #ffffffc9;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* -- icons coté col-nav3 --------------------------------- */
+.nav-col3 a {
+  color: #fff;
+  font-size: 1.3rem;
+  padding: 0 5px;
+}
+.nav-col3 a:hover {
+  color: #333;
+  font-size: 1.4rem;
+  background-color: #fff;
+  border-radius: 50%;
+}
+/* -------------------------------------------------------- Home - My Product  -------------------------------------------------------- */
+
+.box_80vw {
+  width: clamp(425px, 100%, 1140px);
+  height: auto;
+  margin: auto;
+  position: relative;
+  background-color: #fff;
+  box-shadow: #00000011 0px 0.3125rem 15px;
+  border-radius: 0.125rem;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+/* =================================================== Col - left - img ==================================================== */
+
+.small-container {
+  max-width: 1140px;
+  height: auto;
+  margin: auto;
+  padding: 70px 10px;
+}
+
+.row {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* background-color: aqua; */
+  /* align-items: center; */
+}
+
+.single-product .col-left {
+  padding: 10px;
+  /* background-color: rgb(0, 255, 13); */
+}
+
+.col-left img {
+  max-width: 100%;
+  aspect-ratio: 1/1;
+  padding: 0px 0;
+}
+
+.smallimg-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.smallimg-col img {
+  width: 130px;
+  aspect-ratio: 1/1;
+  /* flex-basis: 24%; */
+  cursor: pointer;
+}
+
+/* =================================================== Col - Right + left ==================================================== */
+
+.col-left,
+.col-right {
+  width: max(50%, 350px);
+  height: auto;
+  align-items: center;
+  flex-basis: 1 1 30%;
+  padding: 10px 0 10px 10px;
+  /* max-width: 550px; */
+}
+/* =================================================== Col - Right - text ==================================================== */
+
+.col-right .category p {
+  color: #333;
+  text-align: justify;
+}
+.col-right h1 {
+  font-size: 40px;
+  line-height: normal;
+}
+
+.single-product h4 {
+  font-size: 26px;
+  color: red;
+  font-weight: bold;
+}
+
+.les-3-bloc {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: px;
+}
+
+.single-product select {
+  display: flex;
+  padding: 10px;
+
+  margin: 8px 8px;
+}
+.single-product input {
+  width: 50px;
+  height: 43px;
+  display: flex;
+  padding-left: 10px;
+  font-size: 20px;
+  margin-right: 10px;
+  border: 1 px solid red;
+}
+
+input:focus {
+  outline: none;
+}
+
+.btn {
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: var(--color-btngoup);
+  color: #fff;
+  padding: 13px 20px;
+  margin: 10px auto;
+  border-radius: 2px;
+  transition: background 0.5s;
+}
+.btn:hover {
+  background: var(--color-Noir-gris);
+  color: #fff;
+}
+
+.single-product .fa {
+  color: red;
+  margin-left: 10px;
+}
+
+.drive {
+  padding: 10px 20px;
+}
+/* ~~~~~~~~~~~~~~~~~~~~ Buton lire la suite ~~~~~~~~~~~~~~~~~~~~~~~~ */
+.col-right .info-product {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease;
+}
+
+.col-right .info-product p {
+  text-align: justify;
+  padding: 10px;
+}
+
+#lire {
+  display: none;
+}
+
+.suite {
+  height: 0;
+  transition: all 0.4s;
+  overflow: hidden;
+}
+label {
+  display: inline-block;
+  margin-top: 5px;
+  color: var(--color-gris-mat-perso);
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#lire:checked ~ .suite {
+  height: 305px;
+}
+
+#lire:checked ~ label {
+  visibility: hidden;
+}
+#lire:checked ~ label::after {
+  font-family: "Font Awesome 6 Pro";
+  content: "\f070";
+  display: block;
+  visibility: visible;
+  text-align: center;
+}
+/* -------------------------------------------------------- product_r7_p8 -------------------------------------------------------- */
+.product_r7_p6 {
+  width: clamp(425px, 100%, 1140px);
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  gap: 1rem;
+  /* background-color: #aaff00; */
+  border-top: 1px solid #33333310;
+  border-bottom: 1px solid #33333310;
+}
+
+.product_r7_p6 .box_r7_p6 {
+  width: max(18%, 250px);
+  height: auto;
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: center;
+  /* align-items: center; */
+  /* border: 1px solid red; */
+}
+
+.product_r7_p6 .p6_1,
+.product_r7_p6 .p6_2,
+.product_r7_p6 .p6_3,
+.product_r7_p6 .p6_4,
+.product_r7_p6 .p6_5,
+.product_r7_p6 .p6_6,
+.product_r7_p6 .p6_7,
+.product_r7_p6 .p6_8 {
+  width: max(18%, 185px);
+  aspect-ratio: 1/1.5;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: space-around;
+  /* width: 198px; */
+  /* aspect-ratio: 1/1; */
+  /* background: #2b2d39; */
+}
+
+.product_r7_p6 .box_r7_p6 img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  /* align-items: flex-start; */
+  /* height: 17.5rem; */
+}
+/* --------------------------------------------------------  icons x4  -------------------------------------------------------- */
+
+.icons_r3_i4 {
+  width: clamp(425px, 100%, 1140px);
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  /* background-color: blue; */
+}
+
+.icons {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  text-align: justify;
+  flex: 1 1 15.5rem;
+  text-align: center;
+  /* border: 1px solid; */
+}
+
+.icons i {
+  font-size: 1.875rem;
+  /* width: 1.5625rem;
+  height: 1.5625rem; */
+  color: #1a1b1f;
+  padding-top: 20px;
+}
+
+.icons h4 {
+  color: #1a1b1f;
+  padding: 15px;
+}
+
+.icons p {
+  color: #1a1b1f;
+  padding: 0px 20px 20px 20px;
+}
+
+/* -------------------------------------------------------- logo partenaire -------------------------------------------------------- */
+.partenaire_r11_par6 {
+  width: 100%;
+  height: auto;
+}
+.logo-partenaire {
+  width: clamp(425px, 100%, 1140px);
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 15px;
+  gap: 1rem;
+  border-top: 1px solid #33333310;
+}
+
+.logo-partenaire img {
+  width: 160px;
+  opacity: 0.6;
+}
+
+/* -------------------------------------------------------- newsletter -------------------------------------------------------- */
+
+.newsletter {
+  width: clamp(425px, 100%, 100vw);
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  position: relative;
+  background-color: #f7f4f0;
+  z-index: 1;
+}
+
+.newsletter .box-news {
+  width: clamp(425px, 100%, 1140px);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+}
+
+.newsletter .box-news p {
+  margin: 40px auto;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.box-news .email-box {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.box-news .email-box i {
+  width: 40px;
+  line-height: 40px;
+  background-color: #333;
+  color: #fff;
+}
+
+.tbox,
+.btn-2 {
+  border: none;
+  outline: none;
+}
+
+/* .tbox{
+  width: 260px ;
+  padding: 0 10px;
+} */
+
+.tbox {
+  width: 0px;
+  transition: 0.6s;
+}
+
+.email-box:hover > .tbox,
+.tbox:focus {
+  width: 260px;
+  padding: 0 10px;
+}
+
+.btn-2 {
+  color: #fff;
+  background-color: #333;
+  padding: 0 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* -------------------------------------------------------- footer -------------------------------------------------------- */
+footer {
+  width: 100vw;
+  height: auto;
+  background: #333;
+}
+
+.box_F4 {
+  width: clamp(425px, 100%, 1140px);
+  height: auto;
+  background-color: #333;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.box_F4 .box_f {
+  width: clamp(425px, 100%, 1140px);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 20%;
+}
+.box_F4 .box_f h4 {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--dark-color-lighten);
+  padding: 20px 0 10px 0;
+  text-transform: uppercase;
+}
+.box_F4 .box_f a {
+  color: var(--dark-color-lighten);
+  padding: 2px 20px;
+}
+
+.box_F4 .box_f a:hover {
+  color: red;
+}
+
+.footer-contact .-r14 {
+  display: flex;
+  flex-direction: row;
+  font-size: 26px;
+}
+
+/* -------------------------------------------------------- copyrigth -------------------------------------------------------- */
+.copyrigth {
+  width: 100vw;
+  height: auto;
+  background-color: var(--color-Noir-gris);
+  padding: 16px 0;
+  margin: auto;
+}
+.copyrigth p {
+  color: var(--white-color);
+  text-align: center;
+}
+
+/* < !-- ------------------------------------- Btn : go top btn---------------------------------------- --> */
+.gotopbtn {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background-color: #1b1a1b;
+  top: 20px;
+  right: 20px;
+  text-align: center;
+  line-height: 50px;
+  color: var(--white-color);
+  font-size: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.6s ease-out;
+  opacity: 0;
+  z-index: 15;
+}
+
+.gotopbtn.active {
+  top: calc(100% - 100px);
+  opacity: 1;
+}
+
+.gotopbtn:hover {
+  background-color: var(--color-btngoup);
+}
+
+.gotopbtn::before,
+.gotopbtn::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid var(--color-Blanc-gris);
+  position: absolute;
+  left: 0;
+  box-sizing: border-box;
+  animation: waves 2s linear infinite;
+}
+
+.gotopbtn::after {
+  animation-delay: 1s;
+}
+
+.gotopbtn::after,
+.gotopbtn::before {
+  border-color: var(--color-btngoup);
+}
+
+@keyframes waves {
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* < !-- -------------------------------------End Btn : go top btn---------------------------------------- --> */
