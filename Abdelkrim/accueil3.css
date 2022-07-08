@@ -1,0 +1,273 @@
+@font-face {
+    font-family: 'heading';
+    src: url('assets/HeadingNowTrial-56Bold.ttf');
+}
+
+body {
+    margin: 0%;
+}
+
+.container {
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+
+
+.container img {
+    position: absolute;
+    top: 5%;
+    transition: all 1s;
+    width:clamp(80px,10vw,190px);
+    height:clamp(80px,10vw,190px);
+}
+
+
+h1 {
+    position: absolute;
+    font-size:clamp(25px,7rem,190px);
+    color: white;
+    align-self: center;
+    text-align: center;
+    text-shadow: 2px 2px rgba(0, 18, 151, 0.708);
+    transition: all 1s;
+    font-family: 'heading';
+    /* animation: reveal 3000ms ease-in-out forwards 200ms,
+    glow 2500ms linear infinite 2000ms; */
+}
+
+@keyframes reveal {
+    80%{
+      letter-spacing: 8px;
+    }
+    100% {
+      background-size: 300% 300%;
+    }
+  }
+  @keyframes glow {
+    40% {
+      text-shadow: 0 0 8px #fff;
+    }  }
+
+.gauche {
+    background-image: url(assets/montagne_ete.jpg);
+    height: 100vh;
+    flex-grow: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 2s;
+}
+
+.droite {
+    background-image: url(assets/alpehuez.jpg);
+    height: 100vh;
+    flex-grow: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 2s;
+}
+
+.container a {
+    border: solid 2px white;
+    padding: 5px;
+    position: absolute;
+    text-decoration: none;
+    color: white;
+    width: 150px;
+    text-align: center;
+    font-weight: bold;
+    font-size: x-large;
+    font-family: 'heading';
+    z-index: 1;
+    
+}
+
+.container a:nth-child(1) {
+    right: 60%;
+    bottom: 10%;
+    transition: all 2s;
+
+}
+
+.container a:nth-child(2) {
+    left: 60%;
+    bottom: 10%;
+    transition: all 2s;
+    
+}
+
+.container a:nth-child(1):hover~.gauche {
+    flex-grow: 5;
+}
+
+.container a:nth-child(2):hover~.droite {
+    flex-grow: 5;
+}
+
+.container a:nth-child(2):hover~h1 {
+    opacity: 0;
+}
+
+.container a:nth-child(1):hover~h1 {
+    opacity: 0;
+}
+
+
+
+.container a:nth-child(1):hover~.details {
+    opacity: 1;
+  
+}
+
+.container a:nth-child(1):hover~img {
+
+    transform: scale(1.5);
+    transform: translateY(50%);
+
+}
+
+.container a:nth-child(2):hover~img {
+
+    transform: scale(1.5);
+    transform: translateY(50%);
+
+}
+
+.details {
+    position: absolute;
+    bottom: 30%;
+    right: 30%;
+    color: white;
+    font-size: 50px;
+    opacity: 0;
+    transition: all 1s;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 2px 2px rgba(0, 18, 151, 0.708);
+
+}
+
+.details2 {
+    position: absolute;
+    bottom: 30%;
+    left: 30%;
+    color: white;
+    font-size: 50px;
+    opacity: 0;
+    transition: all 1s;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 2px 2px rgba(0, 18, 151, 0.708);
+
+}
+
+.texteETE {
+    position: absolute;
+    bottom: 20%;
+    left: 7%;
+    color: white;
+    font-size: 25px;
+    visibility: hidden;
+    transition: transform 2s;
+    font-weight: bold;
+    font-family: 'heading';
+    width: 60vw;
+    /* height: 20px; */
+    text-shadow: 2px 2px rgba(0, 18, 151, 0.708);
+}
+
+.texteHIVER {
+    position: absolute;
+    bottom: 20%;
+    right: 15%;
+    color: white;
+    font-size: 25px;
+    visibility: hidden;
+    transition: transform 2s;
+    font-weight: bold;
+    font-family: 'heading';
+    width: 60vw;
+    text-shadow: 2px 2px rgba(0, 18, 151, 0.708);
+}
+
+.container .ete:hover~.texteETE {
+    transform: translateY(-60px);
+    visibility: visible;
+
+}
+.container .hiver:hover~.texteHIVER {
+    transform: translateY(-60px);
+    visibility: visible;
+
+}
+.container .ete:hover~.details {
+    bottom: 40%;
+    visibility: visible;
+transform: scale(1.2);
+}
+.container .hiver:hover~.details2 {
+    bottom: 40%;
+    opacity: 1;
+transform: scale(1.2);
+}
+
+.container .ete:hover+a:nth-child(2) {
+    left: 85%;
+    
+}
+
+.container .ete:hover {
+    /* background-color: rgba(255, 255, 255, 0.594); */
+    transform: scale(1.2);
+    letter-spacing: 4px;
+    /* color: rgba(47, 143, 207, 0.89); */
+   background-color:  rgba(47, 143, 207, 0.507);
+    text-shadow: 2px 2px rgba(0, 18, 151, 0.708);
+    animation: glow 2500ms linear infinite 2000ms;
+    }
+
+.container .hiver:hover {
+    background-color: rgba(47, 143, 207, 0.507);
+    transform: scale(1.2);
+    letter-spacing: 6px;
+    text-shadow: 2px 2px rgba(0, 18, 151, 0.708);
+    animation: glow 2500ms linear infinite 2000ms;
+}
+
+.container.activ>.ete{
+    right: 85%;
+}
+
+.trait_union{
+    display: flex;
+    justify-content: center;
+    width: 355px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: 13% ;
+    transition: width 1.5s, transform 2s;
+    z-index: 0;
+}
+.trait_union:after{
+    content: '';
+    width: 2px;
+    height: 15px;
+    background-color: white;
+    position: absolute;
+    transform: translateY(50%);
+    bottom: 13% ; 
+    
+}
+
+.container .ete:hover~.trait_union{
+    transform: translateX(425px);
+    width: 15px;
+
+}
+
+.container.activ>.trait_union{
+    transform: translateX(-425px);
+    width: 15px;
+}

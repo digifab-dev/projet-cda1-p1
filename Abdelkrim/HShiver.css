@@ -1,0 +1,310 @@
+@font-face {
+  font-family: 'heading';
+  src: url('assets/HeadingNowTrial-56Bold.ttf');
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+}
+
+header {
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: 15%;
+  margin: 0%;
+  padding: 0%;
+  border-bottom: solid 2px white;
+  position: fixed;
+  z-index: 8;
+
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 1%;
+  font-size: clamp(10px,2vw,20px);
+
+}
+
+h1:before {
+  content: '';
+  display: flex;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  background-image: url(assets/logo.png);
+  background-size: cover;
+  width : clamp(60px,5vw, 120px);
+  height: clamp(60px,6vh, 110px);
+  z-index: 7;
+  cursor: pointer;
+
+}
+
+
+h1 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  z-index: 8;
+  color: white;
+  font-size: clamp(10px,3vw,50px);
+  margin-left: 5%;
+ 
+ }
+
+label,
+footer {
+  font-family: sans-serif;
+}
+
+
+#myVideo{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+a {
+  text-decoration : none; 
+  color : white;
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline-block;
+  font-size: larger;
+}
+i{
+  font-size: xx-large;
+}
+
+nav.lieu {
+  width : 40%; 
+  background: #d9d9d969;
+  margin : 40px auto; 
+  position: absolute;
+  bottom: 10%;
+  left: 8%;
+}
+
+nav.quoi {
+  width : 40%; 
+  background: #d9d9d969;
+  margin : 40px auto; 
+  position: absolute;
+  bottom: 10%;
+  right: 8%;
+}
+
+span {
+  padding : 20px;
+  background : white; 
+  color : black;
+  font-size : 1.2em;
+  font-variant : small-caps;
+  cursor : pointer;
+  display: block;
+  z-index: 15;
+ position: relative;
+}
+
+span::after {
+  float: right;
+  right: 10%;
+  content: "+";
+  transform: translateY(10px);
+}
+
+
+.slide, .slide2{
+  clear:both;
+  width:100%;
+  height:0px;
+  overflow: hidden;
+  text-align: center;
+    transition: all 1s ease;
+    position: relative;
+    z-index: 15;
+   
+}
+
+.slide{
+  overflow: scroll;
+}
+.slide::-webkit-scrollbar {
+  width: 5px;
+}
+
+.slide::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+.slide::-webkit-scrollbar-thumb {
+  background-color: white; 
+  border-radius: 20px; 
+}
+
+.slide a, .slide2 a {padding : 20px;}
+
+#touch {position: absolute; opacity: 0; height: 0px;}    
+
+#touch:checked + .slide {height: 120px;} 
+/* #touch:checked { background-color: blue; color: white;} */
+
+#touch.activ:checked + .slide {height: 0px; transition: 2s ease-in-out forwards;}
+#touch2.activ:checked + .slide2 {height: 0px; transition: 2s ease-in-out forwards;}
+
+a:hover{
+  background-color:white;
+  border-radius: 5%;
+  color: blue;
+  transition: all .5s;
+}
+
+#touch2 {position: absolute; opacity: 0; height: 0px;}    
+
+#touch2:checked + .slide2 {height: 300px;} 
+
+.one{
+  font-family: 'heading';
+  font-size: 2rem;
+  color: white;
+  position: absolute;
+  left: 25%;
+  top: 20%;
+  animation: Animation 12s ease-in-out 0s infinite;
+  opacity: 0;
+  
+}
+
+.two{
+  font-family: 'heading';
+  font-size: 4rem;
+  color: white;
+  position: absolute;
+  right: 18%;
+  top: 10%;
+  animation: Animation2 12s ease-in-out infinite;
+  opacity: 0;
+  
+}
+
+.three{
+  font-family: 'heading';
+  font-size: 5rem;
+  color: white;
+  position: absolute;
+  right: 45%;
+  bottom: 25%;
+  animation: Animation3 12s ease-in-out infinite;
+  opacity: 0;
+  
+}
+.four{
+  font-family: 'heading';
+  font-size: 2rem;
+  color: white;
+  position: absolute;
+  left: 25%;
+  bottom: 2%;
+  animation: Animation4 12s ease-in-out infinite;
+  opacity: 0;
+  
+}
+
+.one.bis{animation: Animation3 12s ease-in-out .5s infinite;
+top: 20%; left: 15%;}
+.two.bis{animation: Animation4 12s ease-in-out 1s infinite; font-size: 3rem;}
+.three.bis{animation: Animation 12s ease-in-out 1.5s infinite;
+transform: scale(2);font-size: 3rem; bottom: 25%; right: 35%;}
+.four.bis{animation: Animation2 12s ease-in-out 2s infinite;}
+
+.one.bib{animation: Animation4 12s ease-in-out .5s infinite;
+  top: 40%; left: 45%;font-size: 3rem;}
+  .two.bib{animation: Animation 12s ease-in-out 1s infinite;top: 80%; right: 15%;font-size: 2rem;}
+  .three.bib{animation: Animation2 12s ease-in-out .5s infinite;font-size: 2rem;right: 75%;bottom: 30%;}
+  .four.bib{animation: Animation3 12s ease-in-out 2s infinite;
+  left: 65%; font-size: 1rem;}
+
+@keyframes Animation {
+
+0% {
+  /* font-size: 0%; */
+  opacity: 0;
+}
+
+25% {
+ transform: scale(3);
+ opacity: .7;
+ 
+}
+
+26%,100% {
+opacity: 0;
+
+}
+  
+}
+
+@keyframes Animation2 {
+
+  0%,
+  20% {
+    opacity: 0;
+  }
+  50% {
+    transform: scale(3);
+    opacity: .7;
+  }
+  51% {
+    opacity: 0;
+     }
+  
+  100% {
+    opacity: 0;
+  }
+ }
+
+ @keyframes Animation3 {
+
+  0%,
+  45% {
+    opacity: 0;
+  }
+  75% {
+    transform: scale(3);
+    opacity: .7;
+  }
+  76% {
+    opacity: 0;
+     }
+  
+  100% {
+    opacity: 0;
+  }
+ }
+
+ @keyframes Animation4 {
+
+  0%,
+  70% {
+    opacity: 0;
+  }
+  100% {
+    transform: scale(3);
+    opacity: .7;
+  }
+    
+  /* 100% {
+    opacity: 0;
+  } */
+ }
