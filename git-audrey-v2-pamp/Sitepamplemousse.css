@@ -1,0 +1,1153 @@
+/* Police */
+
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
+
+/* Mise-en-page */
+body {
+  background-color: #000;
+  font-family: "Krona One", sans-serif;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: #f26351;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #fd4843;
+  font-family: "Concert One";
+  text-transform: uppercase;
+}
+
+h2 {
+  text-align: center;
+}
+
+h1:hover,
+.fa-magnifying-glass:hover {
+  color: #fab471;
+}
+
+.btnFinCT {
+  background-color: #f26351;
+  border-radius: 30px;
+  display: inline-block;
+  margin: 3%;
+}
+
+.btnFin {
+  display: block;
+  border: solid 1px #f26351;
+  border-radius: 30px;
+  background-color: #fab471;
+  padding: 10px 30px;
+  color: black;
+  font-weight: 500;
+  font-family: "Krona One", sans-serif;
+  text-decoration: none;
+  text-align: center;
+  font-size: 0.8em;
+  transform: translate(-10px, -10px);
+  transition: all 0.3s;
+  position: relative;
+}
+
+.btnFin:hover {
+  transform: translate(0px, 0px);
+  letter-spacing: 1.5px;
+  color: white;
+}
+
+
+
+
+/* Header encart titre  */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 96%;
+  padding: 1% 2%;
+  flex-wrap: wrap;
+}
+
+h1 {
+  font-size: 3vw;
+  flex-wrap: wrap;
+}
+
+.boutonCTA {
+  position: relative;
+  width: 300px;
+  height: 65px;
+  flex-wrap: wrap;
+}
+
+.boutonCTA a {
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  font-size: 20px;
+  padding: 0 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #4d4a4969;
+  box-shadow: 0 8px 20px #f2645181;
+  border-top: 2px solid #f26451a6;
+  border-bottom: 1px solid #f26451a6;
+  border-radius: 30px;
+  /* pour le blur du backgroung pour faire du flou sur le before : */
+  backdrop-filter: blur(20px);
+}
+
+.boutonCTA:hover a {
+  position: absolute;
+  color: #fab371d0;
+  text-align: center;
+  transition-delay: 0.15s;
+  letter-spacing: 1.3px;
+  transition: 0.3s ease-in-out 0.1s;
+}
+
+/* L'effet en dessous du before */
+.boutonCTA:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 30%;
+  height: 30%;
+  background-color: #f26451d3;
+  border-radius: 50%;
+  transition: 0.3s ease-in-out 0.1s;
+}
+
+.boutonCTA:hover:before {
+  bottom: 10px;
+  height: 70%;
+  width: 90%;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 800px) {
+.titreh1 {
+  width: 100%;
+}
+ 
+  h1 {
+  font-size : 30px;
+  text-align: center;
+ }
+
+ .boutonCTA {
+display: flex;
+width: 50%;
+justify-content: center;
+ }
+
+ .boutonCTA a {
+  width: 80%;
+  height: 50%;
+  font-size: 10px;
+  bottom: 33%;
+  left: 9%;
+}
+
+.boutonCTA:before {
+  left: 50%;
+  bottom: 23%;
+  width: 20%;
+  height: 20%;
+}
+
+.boutonCTA:hover:before {
+  bottom: 25px;
+  height: 45%;
+  width: 40%;
+  transition: 0.5s;
+}
+
+}
+
+/* loupe : Bouton de recherche */
+
+.loupe {
+  width: 50px;
+  height: 50px;
+  background-color: #4d4a4969;
+  box-shadow: 0 8px 20px #f2645181;
+  border-top: 2px solid #f26451a6;
+  border-bottom: 1px solid #f26451a6;
+  border-radius: 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .5s ease-in-out;
+  flex-wrap: wrap;
+}
+
+.loupe.active {
+  width: 190px;
+  transition: .5s ease-in-out;
+}
+
+.loupe > button {
+  color: #f26351;
+  background: transparent;
+  border: none;
+  float: right;
+  padding-right: 10px;
+}
+
+.loupe input {
+  width: 0;
+  border: none;
+  outline: none;
+  /* pour supprimer les bordures qui apparaissent quand on clique sur le champs de recherche pour rentrer ses données. */
+  background: none;
+  font-size: 1em;
+  transition: .5s ease-in-out;
+  color: white;
+}
+
+.loupe input.active {
+  width: 130px;
+  padding-left: 20px;
+  transition: .5s ease-in-out;
+}
+
+@media screen and (max-width: 800px) {
+  .loupe {
+    width: 50px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  .loupe.active {
+    width: 160px;
+  }
+
+  .loupe input.active {
+    width: 100px;
+    padding-left: 1px;
+  }
+}
+
+
+/* section 1: vidéo */
+.accueil {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.video {
+  width: 100%;
+  position: relative;
+}
+
+.rectangle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.726);
+  color: #fab471;
+  display: grid;
+  align-items: center;
+}
+
+.rectangle p,
+.rectancgle div {
+  line-height: 200%;
+  font-size: 2vw;
+  text-align: center;
+  font-weight: 600;
+  padding: 0 10%;
+  color: #f26351;
+  text-shadow:-1px 1px 1px white,-1px 1px .5px white;
+}
+
+.jaune p {
+  color: #fde382;
+  text-shadow:-1px 1px 1px white,-1px 1px .5px white;
+}
+
+.barre {
+ margin-top: -20px;
+  position: relative;
+}
+
+.barre:after {
+  content: "";
+  position: absolute;
+  background-color: #f26351;
+  height: 0.4vh;
+  width: 5vw;
+  display: inline-block;
+  right: 18%;
+  bottom: 70%;
+  transform-origin: left;
+  transform: rotate(160deg);
+}
+
+@media screen and (max-width: 800px) {
+  .rectangle p,
+  .rectancgle div {
+    font-size: 1.5vw;
+  }
+
+  .rectangle {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 45%;
+  }
+  
+  .rectangle p,
+  .rectancgle div {
+    line-height: 1%;
+    font-size: 11px;
+    text-align: center;
+    font-weight: 300;
+    color: #f26351;
+    text-shadow:-1px 1px 1px white,-1px 1px .5px white;
+  }
+
+  .barre {
+    margin-top: 10px;
+   }
+   
+   .barre:after {
+     content: "";
+     position: absolute;
+     background-color: #f26351;
+     height: 0.4vh;
+     width: 5vw;
+     display: inline-block;
+     right: 45%;
+     bottom: 70%;
+     transform-origin: left;
+     transform: rotate(160deg);
+   }
+
+}
+
+
+
+/* section 2: navigation : date et menu */
+
+.nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* bouton revenir en haut */
+.retour {
+  display: flex;
+  justify-content: flex-end;
+  text-align: end;
+  margin: 5px 50px 20px 0;
+}
+
+.fa-up-long {
+  color: #F27A6A;
+}
+
+.up {
+  font-size: 10px;
+  color: #F27A6A;
+  display: inline;
+}
+
+
+/* Date */
+
+.date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  position: relative;
+  transform-style: preserve-3d;
+  /* Porpriété expérimentale. Permet de mettre dans un espace tridimentionnel et doit être définie sur tous les descendants de l'élément.
+    Indique que les fils de l'éléments, concernés par la mise en forme, doivent être positionnés dans l'espace tridimensionnel. */
+  column-gap: 1vw;
+  /* espace entre les cubes */
+  transform: rotateY(30deg) rotateX(25deg);
+  /* Pour mettre les chiffres sur le coté, de profil */
+}
+
+.date .chiffre {
+  position: relative;
+  min-width: 120px;
+  min-height: 120px;
+  transform-style: preserve-3d;
+  transition: 1s ease-in-out;
+  transition-delay: calc(.1s * var(--colonne));
+  /* Animation en décalage grace à 0,1,2,3 .1s par colonne, en décalé */
+  /* Var sur --colonne car ce sont les colonnes qui bougent */
+}
+
+.chiffre span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#fab471, #f26351);
+  /* 1er partie du cube, la face est faite avec la taille et la couleur */
+  border: solid 0.5px #fab471;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4em;
+  color: #fff;
+  transform-style: preserve-3d;
+  transform: rotateX(calc(90deg * var(--case))) translateZ(60px);
+  /* 2eme partie : le cube est fait */
+  /* Var sur le case car ce sont les spans qui bougent */
+}
+
+/* animation simple au hover  */
+.date:hover .chiffre {
+  transform: rotateX(180deg);
+  transform-style: preserve-3d;
+  /* Attention, le nombre de degré est important pour tomber sur les bons chiffre.
+    Si 360deg, on retombe sur les chiffres de bas, nous on veut la date donc on va le faire tourner un peu plus loin,
+    soit avec 90deg de plus. */
+}
+
+.date .chiffre:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: solid 0.5px #fab471;
+  background: linear-gradient(#f26351, #fab471);
+  transform-origin: left;
+  transform: rotateY(90deg) translateX(-50%);
+  /* 2ème étape du cube : Finition du cube (les cotés) */
+}
+
+.chiffre .mois {
+  color: #000;
+}
+
+@media screen and (max-width: 800px) {
+  .date {
+    flex-wrap: wrap;
+    width: 100%;
+    height: 250px;
+    margin-top: 60px;
+    margin-bottom: -60px;
+  }
+
+  .date .chiffre {
+    min-width: 60px;
+    min-height: 60px;
+  }
+
+  .chiffre span {
+    font-size: 2em;
+    transform: rotateX(calc(90deg * var(--case))) translateZ(30px);
+  }
+
+}
+
+/* Menu */
+
+.menu {
+  position: relative;
+  width: 50%;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+ul {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu a {
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  font-size: 3vw;
+  margin: 5% 0;
+}
+
+li a:hover {
+  transform: translateY(-20px);
+  color: rgb(15, 15, 15);
+  /* pour faire presque disparaitre le titre au hover */
+  transition: 0.4s ease-in-out;
+}
+
+li a:before {
+  content: attr(data-text);
+  position: absolute;
+  width: 100%;
+  bottom: -20px;
+  font-size: 1vw;
+  color: #fab471;
+  letter-spacing: 100px;
+  opacity: 0;
+  /* Pour cacher les textes en before */
+  transition: 0.6s ease-in-out;
+  text-shadow: 0 0 10px #f26351, 0 0 50px #f26351, 0 0 80px #f26351;
+  /* Pour différents angles */
+}
+
+/* On change le before quand on passe en hover sur a pour réduire le letter spacing. Fin de l'effet */
+li a:hover:before {
+  letter-spacing: 5px;
+  opacity: 1;
+  /* pour le faire apparaitre */
+  transition: 0.8s ease-in-out;
+  /* petit délai pour avoir le temps de voir l'effet */
+}
+
+@media screen and (max-width: 800px) {
+  .menu {
+    width: 100%;
+    height: 200px;
+  }
+
+  .menu a {
+    font-size: 30px;
+  }
+
+  li a:before {
+    font-size: 11px;
+  }
+
+}
+
+
+
+
+
+/* Frise à l'infini */
+
+.containerFrise {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  justify-content: center;
+}
+
+.frise {
+  font-size: 100px;
+  line-height: .5;
+  text-transform: uppercase;
+  color: black;
+  text-shadow: -1px 1px 2px #f26351, 0 1px 0 #f26351, -1px 0 0 #f26351, 0 -1px 0 #f26351;
+  font-family: "Concert One";
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 800px) {
+  .frise {
+    font-size: 70px;
+  }
+  .containerFrise {
+    margin-top: -50px;
+  }
+
+}
+
+
+/* Mise-en-forme des sections */
+
+#exposants,
+#animations,
+#reservation .containerFrise {
+  width: 100%;
+}
+
+/* les titres des trois parties */
+h2 {
+  font-size: 7vw;
+  text-transform: uppercase;
+  background-image: linear-gradient(to bottom,#FD4843, #F26351, #F27A6A, #FAB471, #FDE382);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 0.5em;
+  text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  h2 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+}
+
+/* Section des exposants et animations - les cartes */
+.containCarte {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.carte {
+  position: relative;
+  max-width: 400px;
+  height: 300px;
+  background-color: #fab471;
+  border-radius: 4px;
+  margin: 10vh 3vw;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s ease-in-out;
+  flex-wrap: wrap;
+}
+
+.carte:hover {
+  height: 630px;
+}
+
+.anim:hover {
+  height: 720px;
+}
+
+.imgCarte {
+  position: relative;
+  max-width: 300px;
+  height: 100px;
+  top: -40px;
+  left: 12%;
+  z-index: 1;
+}
+
+@media screen and (max-width: 800px) {
+  .imgCarte {
+    left: 5%;
+  }
+
+}
+
+.imgCarte img {
+  width: 310px;
+  height: 250px;
+  border-radius: 4px;
+}
+
+.txtCarte {
+  position: relative;
+  margin-top: -300px;
+  padding: 0 30px;
+  text-align: center;
+  color: #000;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.carte:hover .txtCarte {
+  visibility: visible;
+  opacity: 1;
+  margin-top: 100px;
+  transition-delay: 0.3s;
+  overflow: hidden;
+}
+
+.orange {
+  color: #fd4843;
+}
+
+.ajout {
+  font-size: 0.7em;
+}
+
+/* Partie 3 : réservations et contact */
+
+h3 {
+  font-size: 3em;
+}
+
+/* uniquement resa */
+#reservation {
+  width:100%;
+}
+
+#resa {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.paiement {
+  font-size: 1.2em;
+}
+
+.tarifs .ajout {
+  margin-bottom: 4em;
+  font-size: 0.8em;
+  line-height: 30px;
+}
+
+.tarifs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tarifs p {
+  color: white;
+}
+
+.paiement {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.place p {
+  margin-left: -50%;
+}
+
+.nombrePlace {
+  position: relative;
+}
+
+
+.place,
+.prixTotal {
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.8em;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 25px;
+}
+
+.plus,
+.moins {
+  width: 50px;
+  color: #f26351;
+  font-size: 30px;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+}
+
+.moins,
+.nombrePlace input,
+.plus {
+  position: absolute;
+}
+
+.moins {
+  font-size: 50px;
+  bottom: 0;
+  left: -50px;
+}
+
+.nombrePlace input {
+  left: 0;
+  bottom: 5px;
+  border: none;
+}
+
+.plus {
+  left: 85px;
+  bottom: 6px;
+}
+
+.nombrePlace input,
+.euros {
+  width: 80px;
+  height: 35px;
+  color: #fff;
+  font-size: 14px;
+  font-family: "Krona One", sans-serif;
+  background-color: #f26351;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.prixTotal {
+  margin-bottom: 15%;
+}
+
+.euros input {
+  width: 50px;
+  background: transparent;
+  border: none;
+  text-align: center;
+  color: white;
+  font-family: "Krona One", sans-serif;
+}
+
+.nombrePlace input::placeholder,
+.prixTotal input::placeholder {
+  font-size: 14px;
+  color: white;
+  font-family: "Krona One", sans-serif;
+}
+
+.prixTotal input::placeholder {
+  position: absolute;
+  bottom: -10%;
+  left: 20%;
+}
+
+.euros {
+  margin-left: 30px;
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  position: relative;
+}
+
+.euros span {
+  font-weight: 100;
+  position: absolute;
+  right: 17px;
+  bottom: 8px;
+}
+
+/* Pour faire disparaitre les fleche automatique de l'input type number */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.tarifs .btnFin {
+  width: 100px;
+}
+
+@media screen and (max-width: 800px) {
+  .tarifs {
+    width: 90%;
+  }
+  
+  .paiement {
+   width: 50%;
+  }
+ 
+  .place {
+   display: flex;
+   flex-wrap: wrap;
+  }
+ 
+  .place p {
+   width: 200px;
+   flex-wrap: wrap;
+ margin-left: 20px;
+ }
+ 
+ .nombrePlace {
+   flex-wrap: wrap;
+   width: 100%;
+   bottom: -80%;
+   left: 30%;
+ }
+ 
+ .prixTotal {
+  margin-top: 50px;
+  width: 300px;
+}
+
+.euros {
+  margin-left: -15px;
+}
+
+.tarifs .btnFinCT {
+  margin-top: 20px;
+}
+
+ }
+
+
+/* Essemble info pratiques et contact */
+.infoContact {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100vw;
+}
+
+/* uniquement info pratiques */
+
+.info,
+.contact {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.info {
+  text-align: center;
+}
+
+.info p {
+  color: #fff;
+  padding-bottom: 1%;
+  text-align: center;
+  width: 500px;
+}
+
+.info p:nth-child(5) {
+  padding-bottom: 72px;
+}
+
+.info p:nth-child(2) {
+  padding-top: 10px;
+}
+
+.couleur {
+  color: #f26351;
+}
+
+.info .btnFinCT {
+  margin-left: 20px;
+  width: 280px;
+  align-self: center;
+}
+
+.info .btnFin {
+  width: 220px;
+}
+
+@media screen and (max-width: 800px) {
+  .infoContact {
+    width: 100%;
+    flex-wrap: wrap;
+  }  
+  
+  .info {
+      width:100%;
+      font-size: 12px;
+    }
+
+    .info p {
+      width: 300px;
+    }
+
+    .info p:nth-child(5) {
+      padding-bottom: 20px;
+    }
+
+}
+
+
+
+/* uniquement contact */
+.contact {
+  margin-left: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 35vw;
+  gap: 15px;
+  margin-top: -15px;
+}
+
+label {
+  position: relative;
+}
+
+form input:not(.btnFin),
+form textarea {
+  width: 100%;
+  height: 4vh;
+  padding: 15px;
+  font-size: 13px;
+  background-color: black;
+  border: solid 1px #f26351;
+  border-radius: 10px;
+  outline: none;
+  color: white;
+  font-family: "Krona One", sans-serif;
+}
+
+form textarea {
+  height: 6vh;
+}
+
+form span {
+  position: absolute;
+  top: 0;
+  padding: 15px;
+  pointer-events: none;
+  font-size: 13px;
+  color: #f2645158;
+}
+
+.zoneMessage {
+  height: 10vh;
+  resize: vertical;
+}
+
+form span.active {
+  color: #fab471;
+  transform: translate(50px, -5px);
+  background-color: black;
+  border-left: solid 2px #f26351;
+  border-right: solid 2px #f26351;
+  border-radius: 3px;
+  padding: 0 5px 0;
+  font-size: 0.7em;
+  transition-duration: 0.5s;
+}
+
+form .btnFin {
+  width: 130px;
+  cursor: pointer;
+}
+
+form .btnFinCT {
+  width: 130px;
+  align-self: center;
+}
+
+@media screen and (max-width: 800px) {
+  .contact {
+    width: 100%;
+  }
+
+  .contact form {
+    width: 70%;
+    margin-left: -50px;
+  }
+  }
+
+
+
+
+/* maps */
+iframe {
+  width: 99.8%;
+  max-height: 40vh;
+  display: block;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  max-height: 50vh;
+  background-color: #f26351;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.mentionsLeg,
+.reseauxSoc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  flex-wrap: wrap;
+}
+
+.mentionsLeg {
+  color: black;
+  font-size: 10px;
+}
+
+.mentionsLeg a {
+  color: black;
+}
+
+.mentionsLeg a:hover {
+  color: #fab471;
+}
+
+.reseauxSoc > * > i {
+  font-size: 1.5em;
+  padding: 1.5vw;
+}
+
+.reseauxSoc > a {
+  color: black;
+}
+
+.fa:hover {
+  transform: scale(1.5);
+  transform-origin: center;
+  transition: all .4s ease;
+}
+
+.fa-facebook:hover {
+  color: #0676e8;
+}
+
+.fa-instagram:hover {
+  color: #de42d4;
+}
+
+.fa-youtube:hover {
+  color: #fd0000;
+}
+
+.fa-twitter:hover {
+  color: #1d9bf0;
+}
+
+@media screen and (max-width: 800px) {
+
+  .mentionsLeg,
+  .reseauxSoc {
+   width: 100%;
+  }
+
+  .mentionsLeg {
+    text-align: center;
+  }
+
+  .reseauxSoc > * > i {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  }
