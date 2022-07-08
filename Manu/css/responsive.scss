@@ -1,0 +1,32 @@
+body {
+  background-color: black;
+}
+
+.logo {
+  @media screen and (max-width: 412px) {
+    flex-direction: column;
+    padding-right: 0px;
+  }
+}
+.accueil1 {
+  @media screen and (max-width: 412px) {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 0;
+
+    .greenarrow {
+      transform: rotate(90deg);
+    }
+    .burgerimg {
+      transform: scale(0.7);
+    }
+  }
+}
+.all {
+  display: flex;
+  justify-content: flex-start;
+  overflow: scroll;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  height: 100vh;
+}

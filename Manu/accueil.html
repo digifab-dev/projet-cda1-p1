@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="fr" dir="ltr">
+  <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Infos du site -->
+  <head>
+    <link rel="stylesheet" href="css/accueil.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="/font/fontawesome/all_awosame_pro.css" />
+    <title>Burgers For Everyone</title>
+  </head>
+  <body>
+    <header class="logo">
+      <a href="/accueil.html"
+        ><img src="assets/logo-manu-burger.png" alt="logo-manu-burger"
+      /></a>
+      <nav class="menumaster">
+        <ol>
+          <li class="accueil"><a href="#accueil1">Accueil</a></li>
+          <li class="menu"><a href="#menu1">Menu</a></li>
+          <li class="contact"><a href="#contactparent">Contact</a></li>
+        </ol>
+      </nav>
+    </header>
+    <main>
+      <div class="all">
+        <section class="accueil1" id="accueil1">
+          <div class="text1">
+            <h1>make your burger<br />aligator</h1>
+          </div>
+          <img
+            class="greenarrow"
+            src="/assets/green-arrow.png"
+            alt="green-arrow"
+          />
+          <a href="#menu1"
+            ><img
+              class="burgerimg"
+              src="/assets/burger-dessin.png"
+              alt="cercle-neon"
+          /></a>
+        </section>
+        <section class="menu1" id="menu1">
+          <h2>compose ton burger</h2>
+          <!-- <img src="/assets/burger-vide.png" alt="" /> -->
+          <div class="scrollcontainer">
+            <div class="scrollpane">
+              <div draggable="true" class="card actif"></div>
+              <div draggable="true" class="card actif"></div>
+              <div draggable="true" class="card actif"></div>
+              <div draggable="true" class="card actif"></div>
+              <div draggable="true" class="card actif"></div>
+              <div draggable="true" class="card actif"></div>
+              <div draggable="true" class="card actif"></div>
+              <div draggable="true" class="card actif"></div>
+              <div draggable="true" class="card actif"></div>
+              <div draggable="true" class="card actif"></div>
+              <div draggable="true" class="card actif"></div>
+              <div draggable="true" class="card actif"></div>
+            </div>
+          </div>
+          <button class="compose">Composer mon burger</button>
+        </section>
+        <section class="contactparent" id="contactparent">
+          <div class="contact1">
+            <h2>contact us motherburger</h2>
+            <div class="container">
+              <div class="row100">
+                <div class="col">
+                  <div class="inputBox">
+                    <input type="text" required="required" />
+                    <span class="text">First Name</span>
+                    <span class="line"></span>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="inputBox">
+                    <input type="text" required="required" />
+                    <span class="text">Last Name</span>
+                    <span class="line"></span>
+                  </div>
+                </div>
+                <div class="row100">
+                  <div class="col">
+                    <div class="inputBox">
+                      <input type="text" required="required" />
+                      <span class="text">Email</span>
+                      <span class="line"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="inputBox">
+                    <input type="text" required="required" />
+                    <span class="text">Mobile</span>
+                    <span class="line"></span>
+                  </div>
+                </div>
+                <div class="row100">
+                  <div class="col">
+                    <div class="inputBox textarea">
+                      <textarea required="required"></textarea>
+                      <span class="text">Type your message Here...</span>
+                      <span class="line"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row100">
+                  <div class="col">
+                    <input type="submit" value="Send" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contact2" id="contact2">
+            <i class="fa-thin fa-phone-arrow-down-left"></i>
+            <p>phone:</p>
+            <a href="tel:0788921268">0788921268</a>
+            <p>adress: 666 burger avenue,74666 ballaison,tx france</p>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <!-- <button onclick="topFunction()" id="myBtn" title="Go to top">BOT</button> -->
+    </footer>
+    <script src="/js/script.js"></script>
+  </body>
+</html>
