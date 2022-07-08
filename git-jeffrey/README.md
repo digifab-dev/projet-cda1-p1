@@ -1,6 +1,6 @@
 # :star: Histrion :star:
 
-## Site Web fictif sur un théâtre et sa troupe.
+## :performing_arts: Site Web fictif sur un théâtre et sa troupe. :performing_arts:
 
 ### Sources et inspirations :
 
