@@ -1,0 +1,145 @@
+.sectioncontact{
+    display: flex;
+    flex-direction: row;
+    border: solid 5px #e6b350;
+}
+
+.titrecontact{ 
+    background-image: url(/assets/IMG_6576.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.titrecontact p{
+    margin: 20px;
+    text-align: left;
+}
+.ecrivez {
+    color: #e6b350;
+    font-size: 39px;
+    text-align: right;
+}
+
+h2{
+    color: #e6b350;
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+.une_question .formbx {
+    padding: 20px;
+}
+
+.une_question .formbx .form_signupForm {
+    left: 0;
+    padding: 0px;
+
+}
+
+.une_question .formbx .form {
+    padding: 20px;
+}
+
+.une_question .formbx .form_signupForm input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-bottom: 3px solid #aaa;
+    color: #666;
+    transition: 0.4s ease-out;
+}
+
+.form_signupForm .msg{
+    height: 200px;
+}
+
+.flexform input{
+    width: 50%;
+}
+
+.flexform{
+    display: flex;
+    flex-direction: row;
+}
+
+.np{
+    width: 50%;
+    margin: 0 5px 0 0;
+}
+.et{
+    width: 50%;
+    margin: 0 0 0 5px;
+}
+.formbx {
+    top: 0;
+    left: 0;
+    height: 89vh;
+    background: var(--white);
+    justify-content: center;
+    align-items: center;
+}
+.reponse{
+    font-style: italic;
+    color: #e6b350;
+}
+
+
+
+
+
+
+
+.formbx .form_signupForm {
+    position: relative;
+    margin-bottom: 10px;
+}
+.formbx .form_signupForm label {
+    position: absolute;
+    top: 4%;
+    left: 0px;
+    transform: translateY(-50%);
+    color: #aaa;
+    font-size: 15px;
+    transition: 0.4s ease-out;
+}
+
+
+.form_signupForm:nth-child(4) {
+    margin-bottom: 65px;
+    justify-content: center;
+}
+.formbx .form_signupForm .buttonSub {
+    display: block;
+    width: auto;
+    padding: 15px 60px;
+    border: 3px solid orange;
+    border-radius: 999px;
+    background-image: linear-gradient(to right, transparent 50%, orange 50%, orange);
+    background-size: 200%;
+    color: orange;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.formbx .form_signupForm .buttonSub:hover {
+    color: #fff;
+    background-position: 100%;
+    border: 3px solid #fff;
+}
+
+.formbx .form_signupForm:focus-within label,
+.formbx .form_signupForm.animation label {
+    top: 0px;
+    transform: translateY(-100%);
+    color: orange;
+}
+
+.formbx .form_signupForm:focus-within input,
+.formbx .form_signupForm.animation input {
+    border-bottom-color: orange;
+}     

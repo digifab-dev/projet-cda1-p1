@@ -1,0 +1,120 @@
+.container{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.carre1,.carre2,.carre3,.carre4,.carre5,.carre6{
+    height: 500px;
+    width: 21%;
+    background-color: #e6b350;
+    margin: 47px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.photo1 img,.photo2 img,.photo3 img,.photo4 img,.photo5 img,.photo6 img{
+    width: 320px;
+    height: 330px;
+    object-fit: cover ;
+}
+.carre1 .titre1, .carre2 .titre2, .carre3 .titre3, .carre4 .titre4, .carre5 .titre5, .carre6 .titre6{
+    text-align: center;
+}
+
+.carre_pres .texte{
+    padding: 20px;
+    text-align: justify;
+}
+
+
+.carre_pres .content{
+    position: absolute;
+    bottom:0px;
+    transform: translateY(calc(100% - 130px));
+    background-color: #e6b350;
+    transition: all .4S;
+    
+}
+
+.photohover{
+    transition: all 0.4s;
+}
+.carre_pres {
+    transform:translateY(100%);
+    opacity: 0;
+    position: relative;
+    box-shadow: inset 10px 0px 10px #e6b350;
+}
+
+.carre_pres:after {
+    position: absolute;
+    bottom: 0;
+    left:0;
+    height: 50px;
+    width:100%;
+    content: '';
+background: rgb(230,179,80);
+background: linear-gradient(180deg, rgba(230,179,80,0) 0%, rgba(230,179,80,1) 86%);
+    z-index: 10;;
+}
+.carre_pres:hover  .content{
+    transform: translateY(0);
+}
+.carre_pres:hover:after  {
+    opacity: 0;
+}
+/* .photohover:hover{
+    opacity: 0;
+    height: 0;
+    test changement
+} */
+
+iframe{
+    width: 300px;
+    height: 230px;
+    margin-top: 40px;
+    }
+
+    .container .carre1 {
+
+        animation : entrer ease 1s forwards 0.5s;
+    
+    }
+    .container  .carre2 {
+
+           animation : entrer ease 1s forwards 1.5s;
+    
+    }
+    .container .carre3 {
+
+           animation : entrer ease 1.5s forwards 2s;
+    }
+    
+    .container .carre4 {
+
+        animation : entrer ease 2s forwards 2.5s;
+    }
+    
+    .container .carre5 {
+
+        animation : entrer ease 1s forwards 3s;
+    }
+    
+    .container .carre6 {
+
+        animation : entrer ease 1s forwards 3.5s;
+    }
+
+    @keyframes entrer {
+        0% {
+            transform:translateY(100%);
+    opacity: 0;
+
+        }
+        100% {
+            transform:translateY(0%);   
+    opacity: 1;
+
+    
+        }
+    }
