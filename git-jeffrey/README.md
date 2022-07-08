@@ -27,7 +27,7 @@ Glassmorphism https://css.glass/
 
 Vague SVG https://getwaves.io/
 
-Logo https://www.freelogodesign.org/  (puis modifié sur illustrator)
+Logo https://www.freelogodesign.org/  (modifié sur illustrator)
 
 Palette couleurs https://coolors.co/ https://color.adobe.com/fr/
 

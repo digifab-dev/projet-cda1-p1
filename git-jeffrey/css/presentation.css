@@ -12,7 +12,6 @@
     z-index: -1;
     object-fit: cover;
     background-color: #140103;
-
 }
 
 
@@ -49,8 +48,8 @@
     font-size: min(1.5vw, 1.5rem);
 }
 
-.txt_presentation_theatre>h2 {
-    color: inherit;
+h2 {
+    font-size: min(7vw, 7rem);
     font-family: "Helvetica Now Display";
 }
 

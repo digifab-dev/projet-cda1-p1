@@ -1,19 +1,17 @@
 /* ANIMATION TEXTE*/
 
 .anim-text {
-    animation: anim-text 2.5s ease-in both;
+    animation: anim-text 5s ease-out both;
 }
 
 @keyframes anim-text {
     0% {
-        filter: blur(12px);
         opacity: 0;
-        transform: scale(0);
+        transform: scale(1.5);
 
     }
 
     100% {
-        filter: blur(0);
         opacity: 1;
         transform: scale(1);
 
@@ -23,17 +21,20 @@
 
 /* ANIMATION IMAGE */
 
-.zoom-out {
-    animation: zoom-out 5s ease-in both;
+.zoom-in {
+    animation: zoom-in 5s ease-out both
 }
 
-@keyframes zoom-out {
+@keyframes zoom-in {
     0% {
-        transform: scale(1.5);
+        transform: scale(.8);
+        opacity: 0;
     }
 
     100% {
         transform: scale(1);
+        opacity: 1;
+
     }
 }
 
@@ -69,6 +70,7 @@
         opacity: 1;
     }
 }
+
 @keyframes apparition-haut {
     0% {
         transform: translateY(-100px);

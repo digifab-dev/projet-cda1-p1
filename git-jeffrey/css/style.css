@@ -24,6 +24,10 @@ body {
     cursor: url(/assets/img/cursor.png), auto;
 }
 
+h5 {
+    font-size: min(4.375vw, 4.375rem);
+}
+
 nav {
     position: sticky;
     display: flex;
@@ -109,11 +113,13 @@ h1>span>.logo_in_h {
     min-width: 100%;
     justify-content: center;
     align-items: center;
+    /* background-color: #140103; */
+    position: relative;
 }
 
 .sct_1>h1,
-h2,
-h3 {
+.sct_1>h2,
+.sct_1>h3 {
     font-size: min(7vw, 7rem);
     text-align: center;
     color: white;
@@ -162,7 +168,7 @@ h4 {
     height: 100%;
     top: 0;
     right: 0;
-    background: #ec0928;
+    background: #0f4d5c;
     transition: all 250ms ease-out;
     border-radius: .25em;
 }
@@ -170,8 +176,8 @@ h4 {
 .btn:hover {
     color: white;
     border-radius: .25em;
-    border: solid 1px #ec0928;
-    background: #ec0928;
+    border: solid 1px #0f4d5c;
+    background: #0f4d5c;
 }
 
 .btn:hover:after {
@@ -192,14 +198,22 @@ h4 {
     width: 100%;
     background: no-repeat url(/assets/img/theatre_histrion.webp) center / cover;
     filter: grayscale(1);
+    animation: zoom-in 5s ease-out both;
 }
 
+.bg_top {
+    background-color: #140103;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: -2;
+}
 
 .fa-chevron-down {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
-    bottom: 0;
+    bottom: 12vh;
 }
 
 .fa-chevron-down:hover {
@@ -228,7 +242,7 @@ h4 {
     width: auto;
     justify-content: space-evenly;
     align-content: center;
-    background-color: #B39499;
+    background-color: #CCB2A9;
 }
 
 @media screen and (max-width: 600px) {
@@ -246,9 +260,10 @@ h4 {
 }
 
 .cards_title {
-    background-color: #B39499;
+    background-color: #CCB2A9;
     padding: 200px 0 100px 0;
-    position: relative;display: block;
+    position: relative;
+    display: block;
 }
 
 .cards_title :nth-child(1) {
@@ -344,18 +359,9 @@ h4 {
 }
 
 .titre {
-    background: #82B38C;
+    background: #B9CCA9;
 }
 
-.deco_home {
-    background: #ec0928;
-    height: 8px;
-    width: 16rem;
-    border-radius: 25% 75% 25% 75% / 45% 55% 45% 55%;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-}
 
 .grille {
     max-width: 120em;
@@ -395,7 +401,7 @@ h4 {
 
 .grille :nth-child(2):hover,
 .grille :nth-child(14):hover {
-    text-transform: capitalize;
+    transform: scale(1.2);
 }
 
 footer>div {
