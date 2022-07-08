@@ -1,0 +1,860 @@
+@font-face {
+    font-family: 'heading';
+    src: url('assets/HeadingNowTrial-56Bold.ttf');
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url(https://www.laboratoires-biarritz.com/blog/wp-content/uploads/2014/05/ciel-voile-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 12vh;
+    margin: 0%;
+    padding: 0%;
+    border-bottom: solid 2px rgb(20, 11, 125);
+    flex-wrap: wrap;
+
+
+}
+
+header a {
+    color: rgb(8, 19, 133);
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: clamp(16px, 2vw, 30px);
+
+}
+
+
+/* h1:before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background-image: url(assets/logo.png);
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+
+} */
+
+
+h1 a{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(17, 10, 118);
+    font-size: clamp(16px, 6vw, 40px);
+   
+}
+
+.section {
+
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    overflow: hidden;
+    position: relative;
+    height: 77vh;
+}
+
+.ligne1,
+.ligne2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.section>div>span {
+
+    font-size: clamp(5rem, 10vw, 16rem);
+    color: transparent;
+    -webkit-text-stroke: 1px rgb(17, 9, 107);
+    position: relative;
+    font-family: 'heading';
+    z-index: 1;
+
+}
+
+.section:not(:hover) .activite .orange::before,
+.section:not(:hover) .ville .orange::before,
+.section:not(:hover) .evenement .orange:before,
+.section:not(:hover) .sorties .orange:before {
+
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: rgb(255, 179, 109);
+    -webkit-text-stroke: 0px rgb(255, 179, 109);
+    overflow: hidden;
+    animation: animate12 20s linear infinite;
+    z-index: 3;
+    transform: translateX(100%);
+}
+
+.section:not(:hover) .ville,
+.section:not(:hover) .evenement,
+.section:not(:hover) .activite,
+.section:not(:hover) .sorties {
+    overflow: hidden;
+
+}
+
+.section:not(:hover) .activite .orange,
+.section:not(:hover) .ville .orange,
+.section:not(:hover) .evenement .orange,
+.section:not(:hover) .sorties .orange {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    animation: animate1 20s linear infinite;
+    z-index: 2;
+
+}
+
+.section:not(:hover) .evenement .orange:before,
+.section:not(:hover) .evenement .orange {
+    animation-delay: 5s;
+}
+
+.section:not(:hover) .activite .orange:before,
+.section:not(:hover) .activite .orange {
+    animation-delay: 10s;
+}
+
+.section:not(:hover) .sorties .orange:before,
+.section:not(:hover) .sorties .orange {
+    animation-delay: 15s;
+}
+
+
+.ville:hover,
+.evenement:hover,
+.activite:hover,
+.sorties:hover {
+
+    cursor: pointer;
+    -webkit-text-stroke: 2px rgb(255, 179, 109);
+    color: rgb(255, 179, 109);
+}
+
+
+.evenement,
+.sorties {
+
+    margin-left: 10%;
+}
+.ville,
+.activite {
+
+    margin-left: 5%;
+}
+
+@keyframes animate1 {
+
+    0% {
+        transform: translateX(-100%);
+    }
+    20%,
+    25% {
+        transform: translateX(0%);
+    }
+    26%,
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes animate12 {
+
+    0% {
+        transform: translateX(100%);
+    }
+    20%,
+    25% {
+        transform: translateX(0%);
+    }
+    26%,
+    100% {
+       transform: translateX(-100%);
+    }
+}
+
+
+.section:not(:hover) .ville1 {
+    background-image: url(assets/Avoriaz/ville1.jpg);
+    width: max(20%, 150px);
+    height: max(20%, 350px);
+    position: absolute;
+    left: 5%;
+    top: 100%;
+    z-index: 0;
+    transform: rotateZ(-15deg);
+    visibility: hidden;
+    animation: ville1 20s linear infinite 0.1s;
+}
+
+.ville:hover + .ville1{
+    visibility: visible;
+    background-image: url(assets/Avoriaz/ville1.jpg);
+    width: max(20%, 150px);
+    height: max(20%, 350px);
+    position: absolute;
+    left: 5%;
+    top: 20%;
+    z-index: 0;
+    transform: rotateZ(-15deg);
+    animation: activ 0.2s linear forwards;
+}
+
+.section:not(:hover) .ville2 {
+    background-image: url(assets/Avoriaz/ville2.jpg);
+    width: max(20%, 350px);
+    height: max(30%, 350px);
+    position: absolute;
+    background-position: 30%;
+    left: 35%;
+    top: 100%;
+    z-index: 0;
+    transform: rotateZ(-4deg);
+    visibility: hidden;
+    animation: ville2 20s linear infinite 0.2s;
+}
+.ville:hover ~ .ville2 {
+    background-image: url(assets/Avoriaz/ville2.jpg);
+    width: max(20%, 350px);
+    height: max(30%, 350px);
+    position: absolute;
+    background-position: 30%;
+    left: 35%;
+    top: 5%;
+    z-index: 0;
+    transform: rotateZ(-4deg);
+    visibility: visible;
+    animation: activ 0.3s linear forwards;
+}
+
+.section:not(:hover) .ville3 {
+    background-image: url(assets/Avoriaz/ville3.jpg);
+    width: max(20%, 350px);
+    height: max(30%, 350px);
+    position: absolute;
+    right: 5%;
+    top: 100%;
+    z-index: 0;
+    background-size: cover;
+    transform: rotateZ(15deg);
+    visibility: hidden;
+    animation: ville3 20s linear infinite 0.3s;
+}
+.ville:hover ~ .ville3 {
+    background-image: url(assets/Avoriaz/ville3.jpg);
+    width: max(20%, 350px);
+    height: max(30%, 350px);
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    z-index: 0;
+    background-size: cover;
+    transform: rotateZ(15deg);
+    visibility: visible;
+    animation: activ 0.4s linear forwards;
+}
+
+@keyframes ville1 {
+
+    0% {
+        visibility: hidden;
+    }
+    1%,
+    24% {
+        visibility: visible;
+        top: 20%;
+    }
+    25% {
+        visibility: hidden;
+        top: -100%;
+    }
+    26%,
+    100% {
+        visibility: hidden;
+        top: -100%;
+    }
+}
+
+@keyframes ville2 {
+
+    0% {
+        visibility: hidden;
+    }
+    1%,
+    24% {
+        visibility: visible;
+        top: 5%;
+    }
+    25% {
+        visibility: hidden;
+        top: -100%;
+    }
+    26%,
+    100% {
+        visibility: hidden;
+        top: -100%;
+    }
+}
+
+@keyframes ville3 {
+
+    0% {
+        visibility: hidden;
+    }
+    1%,
+    24% {
+        visibility: visible;
+        top: 20%;
+    }
+    25% {
+        visibility: hidden;
+        top: -100%;
+    }
+    26%,
+    100% {
+        visibility: hidden;
+        top: -100%;
+    }
+}
+
+.section:not(:hover) .event1 {
+    background-image: url(assets/Avoriaz/event1.jpg);
+    width: max(25%, 150px);
+    height: max(40%, 350px);
+    position: absolute;
+    left: 5%;
+    top: 100%;
+    background-size: cover;
+    z-index: 0;
+    transform: rotateZ(-15deg);
+    visibility: hidden;
+    animation: event1 20s linear infinite;
+
+}
+
+.evenement:hover ~ .event1 {
+    background-image: url(assets/Avoriaz/event1.jpg);
+    width: max(25%, 150px);
+    height: max(40%, 350px);
+    position: absolute;
+    left: 5%;
+    top: 20%;
+    background-size: cover;
+    z-index: 0;
+    transform: rotateZ(-15deg);
+    visibility: visible;
+    animation: activ 0.2s linear forwards;
+}
+
+.section:not(:hover) .event2 {
+    background-image: url(assets/Avoriaz/event2.png);
+    width: max(40%, 450px);
+    height: max(40%, 450px);
+    position: absolute;
+    background-size: 500px;
+    background-repeat: no-repeat;
+    left: 30%;
+    top: 100%;
+    z-index: 0;
+    transform: rotateZ(-4deg);
+    visibility: hidden;
+    animation: event2 20s linear infinite;
+    animation-delay: 0.2s;
+}
+
+.evenement:hover ~ .event2 {
+    background-image: url(assets/Avoriaz/event2.png);
+    width: max(40%, 450px);
+    height: max(40%, 450px);
+    position: absolute;
+    background-size: 500px;
+    background-repeat: no-repeat;
+    left: 30%;
+    top: -5%;
+    z-index: 0;
+    transform: rotateZ(-4deg);
+    visibility: visible;
+    animation: activ 0.3s linear forwards;
+}
+
+.section:not(:hover) .event3 {
+    background-image: url(assets/Avoriaz/event3.jpg);
+    width: max(30%, 250px);
+    height: max(50%, 250px);
+    position: absolute;
+    right: 5%;
+    top: 100%;
+    z-index: 0;
+    background-position: 0%;
+    transform: rotateZ(15deg);
+    visibility: hidden;
+    animation: event3 20s linear infinite;
+    animation-delay: 0.3s;
+}
+
+.evenement:hover ~ .event3 {
+    background-image: url(assets/Avoriaz/event3.jpg);
+    width: max(30%, 250px);
+    height: max(50%, 250px);
+    position: absolute;
+    right: 5%;
+    top: 40%;
+    z-index: 0;
+    background-position: 0%;
+    transform: rotateZ(15deg);
+    visibility: visible;
+    animation: activ 0.4s linear forwards;
+}
+
+@keyframes event1 {
+
+    0%,
+    25% {
+        visibility: hidden;
+        top: 100%;
+    }
+    26%,
+    49% {
+        visibility: visible;
+        top: 20%;
+    }
+    50% {
+        visibility: hidden;
+        top: -100%;
+    }
+    51%,
+    100% {
+        visibility: hidden;
+        top: -100%;
+    }
+}
+
+@keyframes event2 {
+
+    0%,
+    25% {
+        top: 100%;
+        visibility: hidden;
+    }
+    26%,
+    49% {
+        visibility: visible;
+        top: -5%;
+    }
+    50% {
+        visibility: hidden;
+        top: -100%;
+    }
+    51%,
+    100% {
+        visibility: hidden;
+        top: -100%;
+    }
+}
+
+@keyframes event3 {
+
+    0%,
+    25% {
+        top: 100%;
+        visibility: hidden;
+    }
+    26%,
+    49% {
+        visibility: visible;
+        top: 40%;
+    }
+    50% {
+        visibility: hidden;
+        top: -100%;
+    }
+    51%,
+    100% {
+        visibility: hidden;
+        top: -100%;
+    }
+}
+
+.section:not(:hover) .activite1 {
+    background-image: url(assets/Avoriaz/activite1.jpg);
+    width: max(25%, 150px);
+    height: max(40%, 350px);
+    position: absolute;
+    left: 5%;
+    top: 100%;
+    background-size: cover;
+    background-position: 30%;
+    z-index: 0;
+    transform: rotateZ(-15deg);
+    visibility: hidden;
+    animation: activite1 20s linear infinite 0.2s;
+}
+
+.activite:hover ~ .activite1 {
+    background-image: url(assets/Avoriaz/activite1.jpg);
+    width: max(25%, 150px);
+    height: max(40%, 350px);
+    position: absolute;
+    left: 5%;
+    top: 20%;
+    background-size: cover;
+    background-position: 30%;
+    z-index: 0;
+    transform: rotateZ(-15deg);
+    visibility: visible;
+    animation: activ 0.2s linear forwards;
+}
+
+.section:not(:hover) .activite2 {
+    background-image: url(assets/Avoriaz/activite2.jpg);
+    width: max(20%, 350px);
+    height: max(30%, 250px);
+    position: absolute;
+    background-size: cover;
+    left: 35%;
+    top: 100%;
+    z-index: 0;
+    transform: rotateZ(-4deg);
+    visibility: hidden;
+    animation: activite2 20s linear infinite 0.5s;
+}
+
+.activite:hover ~ .activite2 {
+    background-image: url(assets/Avoriaz/activite2.jpg);
+    width: max(20%, 350px);
+    height: max(30%, 250px);
+    position: absolute;
+    background-size: cover;
+    left: 35%;
+    top: 5%;
+    z-index: 0;
+    transform: rotateZ(-4deg);
+    visibility: visible;
+    animation: activ 0.3s linear forwards;
+}
+
+.section:not(:hover) .activite3 {
+    background-image: url(assets/Avoriaz/activite3.webp);
+    width: max(30%, 250px);
+    height: max(50%, 250px);
+    position: absolute;
+    right: 5%;
+    top: 100%;
+    z-index: 0;
+    background-size: cover;
+    transform: rotateZ(15deg);
+    visibility: hidden;
+    animation: activite3 20s linear infinite 0.7s;
+}
+
+.activite:hover ~ .activite3 {
+    background-image: url(assets/Avoriaz/activite3.webp);
+    width: max(30%, 250px);
+    height: max(50%, 250px);
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    z-index: 0;
+    background-size: cover;
+    transform: rotateZ(15deg);
+    visibility: visible;
+    animation: activ 0.4s linear forwards;
+}
+
+@keyframes activite1 {
+
+    0%,
+    49% {
+        visibility: hidden;
+        top: 100%;
+    }
+    50%,
+    74% {
+        visibility: visible;
+        top: 20%;
+    }
+    75% {
+        visibility: hidden;
+        top: -100%;
+    }
+    76%,
+    100% {
+        visibility: hidden;
+        top: -100%;
+    }
+}
+
+@keyframes activite2 {
+    0%,
+    49% {
+        visibility: hidden;
+        top: 100%;
+    }
+    50%,
+    74% {
+        visibility: visible;
+        top: 5%;
+    }
+    75% {
+        visibility: hidden;
+        top: -100%;
+    }
+    76%,
+    100% {
+        visibility: hidden;
+        top: -100%;
+    }
+}
+
+@keyframes activite3 {
+
+    0%,
+    49% {
+        visibility: hidden;
+        top: 100%;
+    }
+    50%,
+    74% {
+        visibility: visible;
+        top: 20%;
+    }
+    75% {
+        visibility: hidden;
+        top: -100%;
+    }
+    76%,
+    100% {
+        visibility: hidden;
+        top: -100%;
+    }
+}
+
+.section:not(:hover) .sortie1 {
+    background-image: url(assets/Avoriaz/sortir1.png);
+    width: max(25%, 150px);
+    height: max(40%, 350px);
+    position: absolute;
+    left: 5%;
+    top: 100%;
+    background-size: cover;
+    z-index: 0;
+    transform: rotateZ(-15deg);
+    visibility: hidden;
+    animation: sortir1 20s linear infinite 0.5s;
+}
+
+.sorties:hover ~ .sortie1 {
+    background-image: url(assets/Avoriaz/sortir1.png);
+    width: max(25%, 150px);
+    height: max(40%, 350px);
+    position: absolute;
+    left: 5%;
+    top: 20%;
+    background-size: cover;
+    z-index: 0;
+    transform: rotateZ(-15deg);
+    visibility: visible;
+    animation: activ 0.2s linear forwards;
+    
+}
+@keyframes activ {
+    0%
+    {
+        visibility: hidden;
+        top: 100%;
+    }
+    100% {
+        visibility: visible;
+    }
+}
+
+.section:not(:hover) .sortie2 {
+    background-image: url(assets/Avoriaz/sortir2.jpg);
+    width: max(20%, 350px);
+    height: max(30%, 250px);
+    position: absolute;
+    background-size: cover;
+    left: 35%;
+    top: 100%;
+    z-index: 0;
+    transform: rotateZ(-4deg);
+    visibility: hidden;
+    animation: sortir2 20s linear infinite 0.5s;
+}
+
+.sorties:hover ~ .sortie2 {
+    background-image: url(assets/Avoriaz/sortir2.jpg);
+    width: max(20%, 350px);
+    height: max(30%, 250px);
+    position: absolute;
+    background-size: cover;
+    left: 35%;
+    top: 5%;
+    z-index: 0;
+    transform: rotateZ(-4deg);
+    visibility: visible;
+    animation: activ 0.3s linear forwards;
+}
+
+.section:not(:hover) .sortie3 {
+    background-image: url(assets/Avoriaz/sortir3.jpg);
+    width: max(30%, 350px);
+    height: max(50%, 350px);
+    position: absolute;
+    right: 5%;
+    top: 100%;
+    z-index: 0;
+    background-size: 400px;
+    background-repeat: no-repeat;
+    transform: rotateZ(15deg);
+    visibility: hidden;
+    animation: sortir3 20s linear infinite 0.5s;
+}
+
+.sorties:hover ~ .sortie3 {
+    background-image: url(assets/Avoriaz/sortir3.jpg);
+    width: max(30%, 350px);
+    height: max(50%, 350px);
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    z-index: 0;
+    background-size: 400px;
+    background-repeat: no-repeat;
+    transform: rotateZ(15deg);
+    visibility: visible;
+    animation: activ 0.4s linear forwards;
+   }
+
+@keyframes sortir1 {
+    0%,
+    74% {
+        visibility: hidden;
+        top: 100%;
+    }
+    75%,
+    98% {
+        visibility: visible;
+        top: 20%;
+    }
+    100% {
+        visibility: hidden;
+        top: -100%;
+    }
+}
+
+@keyframes sortir2 {
+
+    0%,
+    74% {
+        visibility: hidden;
+        top: 100%;
+    }
+    75%,
+    98% {
+        visibility: visible;
+        top: 5%;
+    }
+    100% {
+        visibility: hidden;
+        top: -100%;
+    }
+}
+
+@keyframes sortir3 {
+    0%,
+    74% {
+        visibility: hidden;
+        top: 100%;
+    }
+    75%,
+    98% {
+        visibility: visible;
+        top: 30%;
+    }
+    100% {
+        visibility: hidden;
+        top: -100%;
+    }
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+}
+
+.dropdown-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    visibility: hidden;
+    position: absolute;
+    background-color: #f9f9f97e;
+    min-width: 110px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 2);
+    padding: 10px 16px;
+    z-index: 9;
+
+}
+
+.dropdown:hover .dropdown-content {
+    visibility: visible;
+    height: auto;
+    backdrop-filter: blur(5px); 
+}
+
+.dropdown-content a {
+    font-size: 18px;
+    padding: 5% 0%;
+    /* line-height: 40px; */
+    z-index: 9;
+    /* padding: 5%; */
+    transition: 0s;
+    width: 100%;
+    text-align: center;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #f9f9f97e;
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,2); */
+    z-index: 9;
+    color: white;
+    /* -webkit-text-stroke: 1px rgb(8, 19, 133); */
+
+}
+
+.dropbtn {
+    /* padding: 4%; */
+    transition: all .1s ease-in;
+    min-width: 110px;
+}
