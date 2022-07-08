@@ -1,0 +1,74 @@
+{
+  "1": {
+    "type": "claquette",
+    "name": "La Classique",
+    "price": 135,
+    "colors": ["#000", "#FF0000", "#1F9902", "#020999"],
+    "sizes": [40, 41, 42, 43]
+  },
+  "2": {
+    "type": "chaussette",
+    "name": "La Basique",
+    "price": 55
+  },
+  "3": {
+    "type": "chaussette",
+    "name": "La Week End",
+    "price": 55
+  },
+  "4": {
+    "type": "chaussette",
+    "name": "La Pair Simple",
+    "price": 55,
+    "colors": ["#020999", "#FF0000", "#898989"],
+    "sizes": [40, 41, 42, 43]
+  },
+  "5": {
+    "type": "claquette",
+    "name": "La Touriste",
+    "price": 135,
+    "colors": ["#020999", "#FF0000", "#898989"],
+    "sizes": [40, 41, 42, 43]
+  },
+  "6": {
+    "type": "claquette",
+    "name": "La Sportive",
+    "price": 135,
+    "colors": ["#020999", "#FF0000", "#898989"],
+    "sizes": [40, 41, 42, 43]
+  },
+  "7": {
+    "type": "claquette",
+    "name": "La Chomeuse",
+    "price": 135,
+    "colors": ["#020999", "#FF0000", "#898989"],
+    "sizes": [40, 41, 42, 43]
+  },
+  "8": {
+    "type": "claquette",
+    "name": "La Nouvelle",
+    "price": 135,
+    "colors": ["#020999", "#FF0000", "#898989"],
+    "sizes": [40, 41, 42, 43]
+  },
+  "9": {
+    "type": "chaussette",
+    "name": "La Carrelée",
+    "price": 55
+  },
+  "10": {
+    "type": "chaussette",
+    "name": "La Lionel Messi",
+    "price": 55
+  },
+  "11": {
+    "type": "chaussette",
+    "name": "La Mémère",
+    "price": 55
+  },
+  "12": {
+    "type": "chaussette",
+    "name": "La Moche",
+    "price": 55
+  }
+}

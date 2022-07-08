@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheet/style.css" />
+    <link
+      rel="icon"
+      sizes="16x16 32x32"
+      type="image/x-ico"
+      href="file/icon/icon.ico"
+    />
+    <title>Claquettes Chaussettes</title>
+    <script
+      src="https://kit.fontawesome.com/1e57ded1df.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header id="headerNav">
+      <div id="logoNav">
+        <figure>
+          <img id="signe-j" src="file/gif-header/signe-j-10.png" />
+        </figure>
+        <h1 class="claquetteActive">
+          <a href="#claquette" id="claquetteToggle">Claquettes</a>
+          <a href="#chaussette" id="chaussetteToggle"
+            ><span>Chaussettes</span></a
+          >
+        </h1>
+      </div>
+      <div id="userNav">
+        <div class="userNavButton">
+          <button id="cartToggle">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </button>
+        </div>
+        <div class="userNavButton">
+          <button><i class="fa-solid fa-user"></i></button>
+        </div>
+      </div>
+      <div id="cart">
+        <header>
+          <h5>Votre panier <span id="nbArticle">0</span> articles : <span id="priceCard">0</span>€</span></h5>
+          <button id="emptyCard">empty</button>
+          <button id="order">order</button>
+        </header>
+        <div id="articles">
+        </div>
+        <footer>
+          <button id="cartToggleClose">
+            <i class="fa-solid fa-arrow-up"></i>
+          </button>
+        </footer>
+      </div>
+    </header>
+    <main>
+      <section id="claquettes">
+        <aside id="othersProducts">
+          <div id="circle">
+            <div class="quart">
+              <figure>
+                <img src="file/products/la-touriste.png" id="otherProduct5"/>
+              </figure>
+            </div>
+            <div class="quart">
+              <figure>
+                <img src="file/products/la-chomeuse.png" id="otherProduct7"/>
+              </figure>
+            </div>
+            <div class="quart">
+              <figure>
+                <img src="file/products/la-nouvelle.png" id="otherProduct8"/>
+              </figure>
+            </div>
+            <div class="quart">
+              <figure>
+                <img src="file/products/la-sportive.png" id="otherProduct6"/>
+              </figure>
+            </div>
+          </div>
+        </aside>
+        <article id="product" product="1">
+          <div id="infoProduct">
+            <header>
+              <h2>La Classique</h2>
+              <h3>135€</h3>
+              <button id="addClaquetteToCart"><i class="fa-solid fa-cart-plus"></i></button>
+            </header>
+            <form>
+              <fieldset>
+                <legend>Size</legend>
+                <label for="sizes">
+                  <input type="radio" id="42" class="radioSize" name="sizes" checked />
+                  <span class="overlay">42</span>
+                </label>
+                <label for="sizes">
+                  <input type="radio" id="43" class="radioSize" name="sizes" />
+                  <span class="overlay">43</span>
+                </label>
+                <label for="sizes">
+                  <input type="radio" id="44" class="radioSize" name="sizes" />
+                  <span class="overlay">44</span>
+                </label>
+                <label for="sizes">
+                  <input type="radio" id="45" class="radioSize" name="sizes" />
+                  <span class="overlay">45</span>
+                </label>
+              </fieldset>
+              <fieldset>
+                <legend>Colors</legend>
+                <label for="red">
+                  <input type="radio" id="color-1" class="radioColor" name="colors" checked />
+                  <span class="overlay"></span>
+                </label>
+                <label for="blue">
+                  <input type="radio" id="color-2" class="radioColor" name="colors" />
+                  <span class="overlay"></span>
+                </label>
+                <label for="green">
+                  <input type="radio" id="color-3" class="radioColor" name="colors" />
+                  <span class="overlay"></span>
+                </label>
+              </fieldset>
+            </form>
+          </div>
+          <div id="imagesProduct">
+            <figure id="firstImgProduct">
+              <img src="file/products/la-classique.png" />
+            </figure>
+            <div id="etoiles-filantes">
+              <div class="etoile-filante"></div>
+              <div class="etoile-filante"></div>
+              <div class="etoile-filante"></div>
+            </div>
+            <div id="othersImg">
+              <div class="othersImg">
+                <figure>
+                  <img src="file/products/la-classique.png" class="othersImgSrc" />
+                </figure>
+              </div>
+              <div class="othersImg">
+                <figure>
+                  <img src="file/products/la-classique.png" class="othersImgSrc" />
+                </figure>
+              </div>
+              <div class="othersImg">
+                <figure>
+                  <img src="file/products/la-classique.png" class="othersImgSrc" />
+                </figure>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section id="chaussettes">
+        <header>
+        <article id="textChaussette">
+          <h2>La Basique</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit
+            dolore incidunt quos! Porro, nisi. Eligendi obcaecati sapiente sunt
+            optio nisi fugiat repellat beatae, ratione debitis, saepe inventore
+            culpa voluptatum. Quibusdam placeat velit nostrum!
+          </p>
+          <button id="addChaussetteToCart"><i class="fa-solid fa-cart-plus"></i></button>
+        </article>
+        <aside id="imgChaussette" product="2">
+          <figure>
+            <img src="file/products/la-basique.png" />
+          </figure>
+        </aside>
+        </header>
+        <section id="othersChaussettes">
+          <div id="slide">
+            <div id="otherProduct9" class="othersChaussettes">
+              <a href="#">
+                <figure>
+                  <img src="file/products/la-carrelee.png" />
+                </figure>
+              </a>
+            </div>
+            <div id="otherProduct11" class="othersChaussettes">
+              <a href="#">
+                <figure>
+                  <img src="file/products/la-memere.png" />
+                </figure>
+              </a>
+            </div>
+            <div id="otherProduct12" class="othersChaussettes">
+              <a href="#">
+                <figure>
+                  <img src="file/products/la-moche.png" />
+                </figure>
+              </a>
+            </div>
+            <div id="otherProduct3" class="othersChaussettes">
+              <a href="#">
+                <figure>
+                  <img src="file/products/la-week-end.png" />
+                </figure>
+              </a>
+            </div>
+            <div id="otherProduct4" class="othersChaussettes">
+              <a href="#">
+                <figure>
+                  <img src="file/products/la-pair-simple.png" />
+                </figure>
+              </a>
+            </div>
+            <div id="otherProduct10" class="othersChaussettes">
+              <a href="#">
+                <figure>
+                  <img src="file/products/la-lionel-messi.png" />
+                </figure>
+              </a>
+            </div>
+        </section>
+      </section>
+    </main>
+    <footer id="footer" title="Footer">
+      <section>
+        <ul>
+          <li><a href="#">CGV</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Cookies</a></li>
+        </ul>
+        <ul>
+          <li title="Email contact"><i class="fa-solid fa-at"></i></li>
+          <li title="Call phone"><i class="fa-solid fa-phone-flip"></i></li>
+          <li title="Localize"><i class="fa-solid fa-location-dot"></i></li>
+        </ul>
+      </section>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

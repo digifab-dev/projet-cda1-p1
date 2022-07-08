@@ -1,0 +1,35 @@
+@keyframes width100 {
+    from{
+        width: 0px;
+    }
+    to{
+        width: var(--w);
+    }
+}
+
+@keyframes tourne {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes tourneInverse {
+    from{
+        transform: rotate(-45deg);
+    }
+    to{
+        transform: rotate(-405deg);
+    }
+}
+
+@keyframes slideChaussette {
+    from {
+      transform: translateX(0px);
+    }
+    to {
+      transform: translateX(-350px);
+    }
+  }

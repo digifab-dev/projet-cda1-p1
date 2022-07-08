@@ -1,0 +1,18 @@
+main {
+  width: auto;
+  height: calc(100% - 80px);
+  position: fixed;
+  top: 80px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  left: -00%;
+  transition: left 0.4s ease;
+  #claquettes,
+  #chaussettes {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+}
